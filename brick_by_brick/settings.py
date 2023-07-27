@@ -33,6 +33,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    'brick-by-brickk.herokuapp.com',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu102.gitpod.io',
 ]
 
