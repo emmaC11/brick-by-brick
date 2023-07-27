@@ -34,6 +34,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'brick-by-brickk.herokuapp.com',
+    'brick-by-brickk-8a85ca9be3ac.herokuapp.com',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu102.gitpod.io',
 ]
 
