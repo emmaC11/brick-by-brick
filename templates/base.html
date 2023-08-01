@@ -1,4 +1,5 @@
 {% load static %}
+{% load static tailwind_tags %}
 <p>this is base.html</p>
 
 <!DOCTYPE html>
@@ -6,6 +7,7 @@
 
 <head>
   <title>Brick By Brick</title>
+  {% tailwind_css %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
@@ -17,11 +19,11 @@
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-  <div class="bg-blue-500 p-4">
+  <div class="bg-red-500 p-4">
     This is a test element with Tailwind CSS styles applied.
   </div>
   <div class="bg-blue-500 p-4">
-    This is a test element with Tailwind CSS styles applied.
+    This is a test element with Tailwind CSS styles appl.
   </div>
   {% include 'navbar.html' %}
 </body>
