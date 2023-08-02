@@ -56,7 +56,7 @@ INSTALLED_APPS = [
     'brick_by_brick'
 ]
 
-TAILWIND_APP_NAME = 'lego_main'
+TAILWIND_APP_NAME = ''
 
 INTERNAL_IPS = [
     "127.0.0.1",
