@@ -50,13 +50,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
-    'tailwind',
     'cloudinary',
+    'tailwind',
+    'theme',
     'lego_main',
     'brick_by_brick'
 ]
 
-TAILWIND_APP_NAME = ''
+TAILWIND_APP_NAME = 'theme'
 
 INTERNAL_IPS = [
     "127.0.0.1",
