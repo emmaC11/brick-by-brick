@@ -1,2 +1,8 @@
+:root {
+    --yellow-light: #ffdb4b;
+    --yellow: #ffcf00;
+}
 
-
+nav{
+    background-color: var(--yellow);
+}
