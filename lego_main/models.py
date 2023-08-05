@@ -2,6 +2,10 @@ from django.db import models
 from cloudinary.models import CloudinaryField
 
 
+class LegoSetTheme(models.Model):
+    pass
+
+
 class LegoSet(models.Model):
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=10, decimal_places=2)
@@ -17,11 +21,6 @@ class LegoSet(models.Model):
     def __str__(self):
         return self.name
     pass
-
-
-class LegoSetTheme(models.Model):
-    pass
-
 
 # when a lego set is added to the cart it becomes an order item
 class OrderItem(models.Model):
