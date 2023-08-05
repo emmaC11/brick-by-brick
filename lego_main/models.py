@@ -3,7 +3,11 @@ from cloudinary.models import CloudinaryField
 
 
 class LegoSetTheme(models.Model):
-    pass
+    theme_name = models.CharField(max_length=200)
+    theme_description = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.theme_name
 
 
 class LegoSet(models.Model):
