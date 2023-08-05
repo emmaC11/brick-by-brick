@@ -19,4 +19,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('lego_main.urls'), name='lego_main_urls'),
+    path('accounts/', include('allauth.urls')),
 ]
