@@ -35,6 +35,8 @@ class OrderItem(models.Model):
 class Order(models.Model):
     # associate order with a user
     user = models.ForeignKey(User, on_delete=models.CASCADE)
+    items = models.ManyToManyField(OrderItem)
+    order_date = models.DateTimeField()
     ordered = models.BooleanField(default=False)
 
     def __str__(self):
