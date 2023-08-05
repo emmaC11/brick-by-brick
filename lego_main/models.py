@@ -27,9 +27,14 @@ class LegoSet(models.Model):
         return self.name
     pass
 
+
 # when a lego set is added to the cart it becomes an order item
 class OrderItem(models.Model):
-    pass
+    item = models.ForeignKey(LegoSet, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    
+    def __str__(self):
+        return self.item.name
 
 
 class Order(models.Model):
