@@ -33,4 +33,10 @@ class OrderItem(models.Model):
 
 
 class Order(models.Model):
+    # associate order with a user
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    ordered = models.BooleanField(default=False)
+
+    def __str__(self):
+        return self.user.username
     pass
