@@ -6,3 +6,9 @@
 nav{
     background-color: var(--yellow);
 }
+
+.hero-bg {
+    background-image: url("../images/hero-image.jpg");
+    background-size: cover;
+    background-position: center;
+}
