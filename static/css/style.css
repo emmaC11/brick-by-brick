@@ -1,10 +1,16 @@
 :root {
     --yellow-light: #ffdb4b;
     --yellow: #ffcf00;
+    --footerPurple: rgb(32, 29, 72);
 }
 
 nav{
     background-color: var(--yellow);
+}
+
+
+footer{
+    background-color: var(--footerPurple);
 }
 
 .hero-bg {
