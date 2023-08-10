@@ -815,6 +815,10 @@ select {
   width: 3rem;
 }
 
+.flex-col {
+  flex-direction: column;
+}
+
 .items-center {
   align-items: center;
 }
@@ -947,6 +951,10 @@ select {
 }
 
 @media (min-width: 768px) {
+  .md\:flex-row {
+    flex-direction: row;
+  }
+
   .md\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
