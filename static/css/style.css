@@ -8,11 +8,6 @@ nav{
     background-color: var(--yellow);
 }
 
-
-footer{
-    background-color: var(--footerPurple);
-}
-
 .hero-bg {
     background-image: url("../images/hero-image.jpg");
     background-size: cover;
