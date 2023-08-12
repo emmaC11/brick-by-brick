@@ -14,6 +14,9 @@ class MarketingFormView(generic.FormView):
     template_name = 'marketing.html'
     form_class = MarketingForm
 
+    def get_success_url(self):
+        return reverse("marketing")
+
 
 def product_list(request):
     context = {
