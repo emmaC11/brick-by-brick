@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from .models import LegoSet
+from .forms import MarketingForm
 
 # Create your views here.
 
