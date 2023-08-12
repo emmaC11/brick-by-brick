@@ -1,9 +1,22 @@
 {% extends "base.html" %}
 {% block content %}
-<div class="flex items-center justify-center" >
-    <div class="text-center text-black">
+<div class="flex flex-col items-center justify-center">
+    <div class="text-center text-black mb-8">
         <h2 class="text-4xl font-bold mb-4">Receive emails from LEGO experts</h2>
         <p class="text-xl md:text-2xl">We care about your data. Read our privacy policy.</p>
     </div>
+    <div class="marketing-form">
+        <div class="row justify-content-center">
+            <div class="col-md-7">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form }}
+                    <input type="submit" class="bg-orange text-black font-semibold rounded-md py-2 px-3 mt-6" value="Submit message" />
+                </form>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 {% endblock %}
