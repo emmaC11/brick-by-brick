@@ -10,6 +10,10 @@ class HomeView(generic.TemplateView):
     template_name = 'home.html'
 
 
+class MarketingFormView(generic.FormView):
+    form_class = MarketingForm
+
+
 def product_list(request):
     context = {
         'lego_sets': LegoSet.objects.all(),
