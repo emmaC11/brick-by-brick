@@ -11,6 +11,7 @@ class HomeView(generic.TemplateView):
 
 
 class MarketingFormView(generic.FormView):
+    template_name = 'marketing.html'
     form_class = MarketingForm
 
 
