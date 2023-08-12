@@ -18,11 +18,13 @@
   </script>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
-<body>
+<body class="flex flex-col min-h-screen">
   {% include 'navbar.html' %}
 
+  <main class="flex-1">
   {% block content %}
   {% endblock %}
+</main>
 
   {% include 'footer.html' %}
   <script src="https://kit.fontawesome.com/c05c29f2a2.js" crossorigin="anonymous"></script>
