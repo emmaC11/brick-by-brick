@@ -4,8 +4,8 @@
 <div class="container mx-auto py-8">
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {% for legoset in object_list %}
-        <div class="bg-white p-6 shadow-md rounded-lg">
-            <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mb-4 max-h-96">
+        <div class="bg-white p-6 shadow-md rounded-lg w-full h-full border border-gray-300">
+            <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mb-4 max-h-64">
             <h3 class="text-xl font-semibold mb-2">{{ legoset.name }}</h3>
             <p class="mt-2 mb-4">
                 <span class="price">€{{ legoset.price }}</span>
@@ -16,5 +16,7 @@
         {% endfor %}
     </div>
 </div>
+
+
 
 {% endblock %}
