@@ -7,3 +7,7 @@ class ProductListView(generic.ListView):
     template_name = 'cart/product_list.html'
     queryset = LegoSet.objects.all()
 
+
+class LegoSetDetailView(generic.DetailView):
+    queryset = LegoSet.objects.all()
+
