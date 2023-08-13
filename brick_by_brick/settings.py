@@ -59,6 +59,7 @@ INSTALLED_APPS = [
     'theme',
     'crispy_forms',
     'crispy_bootstrap4',
+    'cart',
     'lego_main',
     'brick_by_brick'
 ]
