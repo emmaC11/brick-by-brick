@@ -55,9 +55,10 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
-    'crispy_forms',
     'tailwind',
     'theme',
+    'crispy_forms',
+    'crispy_bootstrap4',
     'lego_main',
     'brick_by_brick'
 ]
