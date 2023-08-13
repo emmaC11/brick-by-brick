@@ -18,6 +18,8 @@ class MarketingFormView(generic.FormView):
         return reverse("marketing")
     
     def form_valid(self, form):
+        messages.info(self.request, "You are now subscribed!")
+        return super(MarketingFormView).form_valid(form)
         
 
 
