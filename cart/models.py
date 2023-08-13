@@ -49,7 +49,7 @@ class Order(models.Model):
     ordered = models.BooleanField(default=False)
 
     def __str__(self):
-        return self.user.username
+        return self.user.username, self.reference_number
     pass
 
     @property
