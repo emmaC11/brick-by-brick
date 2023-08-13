@@ -5,6 +5,6 @@ urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
     path('product_list/', views.product_list, name='product_list'),
     path('marketing/', views.MarketingFormView.as_view(), name='marketing'),
-    path('cart/', include('cart.urls', namespace='cart')),
+    # path('cart/', include('cart.urls', namespace='cart')),
 
 ]
