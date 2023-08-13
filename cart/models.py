@@ -94,4 +94,8 @@ class Payment(models.Model):
 
     def __str__(self):
         return self.order
+    
+    @property
+    def reference_number(self):
+        return f"PAYMENT-{self.order}-{self.pk}"
 
