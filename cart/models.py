@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.shortcuts import reverse
 from cloudinary.models import CloudinaryField
 
 
@@ -48,6 +49,9 @@ class LegoSet(models.Model):
     def __str__(self):
         return self.name
     pass
+
+    def get_legoset(self):
+        return reverse('cart:product_detail', args=[self.slug])
 
 
 # when a lego set is added to the cart it becomes an order item

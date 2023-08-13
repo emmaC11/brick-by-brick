@@ -6,7 +6,9 @@
         {% for legoset in object_list %}
         <div class="bg-white p-6 shadow-md rounded-lg w-full h-full border border-gray-300">
             <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mb-4 max-h-64">
+            <a href="{{ legoset.get_legoset }}">
             <h3 class="text-xl font-semibold mb-2">{{ legoset.name }}</h3>
+            </a>
             <p class="mt-2 mb-4">
                 <span class="price">€{{ legoset.price }}</span>
                 <span class="age ml-2"><i class="fa-solid fa-cake-candles"></i>{{ legoset.ages }}+</span>
