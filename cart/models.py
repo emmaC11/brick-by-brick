@@ -79,3 +79,6 @@ class Order(models.Model):
     @property
     def reference_number(self):
         return f"ORDER-{self.pk}"
+    
+class Payment(models.Model):
+    
