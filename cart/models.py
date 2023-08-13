@@ -92,3 +92,6 @@ class Payment(models.Model):
     amount = models.FloatField()
     raw_response = models.TextField()
 
+    def __str__(self):
+        return self.order
+
