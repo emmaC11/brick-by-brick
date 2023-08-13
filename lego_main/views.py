@@ -20,7 +20,10 @@ class MarketingFormView(generic.FormView):
     def form_valid(self, form):
         messages.info(self.request, "You are now subscribed!")
         email = form.cleaned_data.get("email")
+
+        form_data = "Add user to marketing email list: {email}".format(email=email)
         return super(MarketingFormView).form_valid(form)
+    
         
 
 
