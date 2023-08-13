@@ -38,8 +38,8 @@ class MarketingFormView(generic.FormView):
         
 
 
-def product_list(request):
-    context = {
-        'lego_sets': LegoSet.objects.all(),
-    }
-    return render(request, 'product_list.html')
+# def product_list(request):
+#     context = {
+#         'lego_sets': LegoSet.objects.all(),
+#     }
+#     return render(request, 'product_list.html')
