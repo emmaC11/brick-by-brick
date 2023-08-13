@@ -8,11 +8,14 @@
         <div class="bg-white p-6 shadow-md rounded-lg">
             <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mb-4 max-h-96">
             <h3 class="text-xl font-semibold mb-2">{{ legoset.name }}</h3>
-            <p class="mt-2">{{ legoset.price }}</p>
-            <p class="text-gray-600"><i class="fa-solid fa-cake-candles"></i>{{ legoset.ages }}</p>
+            <p class="mt-2">
+                <span class="price">{{ legoset.price }}</span>
+                <span class="age"><i class="fa-solid fa-cake-candles"></i>{{ legoset.ages }}</span>
+            </p>
             <a href="" class="bg-orange text-black font-semibold rounded-md py-2 px-3" > <i class="fa-solid fa-bag-shopping"></i>Add to Bag</a>
         </div>
         {% endfor %}
     </div>
 </div>
+
 {% endblock %}
