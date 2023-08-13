@@ -36,6 +36,7 @@ ALLOWED_HOSTS = [
     'brick-by-brickk.herokuapp.com',
     'brick-by-brickk-8a85ca9be3ac.herokuapp.com',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu102.gitpod.io',
+    '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu103.gitpod.io',
     'localhost'
 ]
 
@@ -54,6 +55,7 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    'crispy_forms',
     'tailwind',
     'theme',
     'lego_main',
@@ -64,6 +66,8 @@ SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 TAILWIND_APP_NAME = 'theme'
 
