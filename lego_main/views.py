@@ -16,6 +16,9 @@ class MarketingFormView(generic.FormView):
 
     def get_success_url(self):
         return reverse("marketing")
+    
+    def form_valid(self, form):
+        
 
 
 def product_list(request):
