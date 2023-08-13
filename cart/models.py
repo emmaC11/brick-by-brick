@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
+class Address(models.Model):
+    
+
 class LegoSetTheme(models.Model):
     theme_name = models.CharField(max_length=200)
     theme_description = models.CharField(max_length=500)
