@@ -4,7 +4,7 @@ from django.contrib import messages
 from django.shortcuts import render, reverse
 from django.views import generic
 #from django.shortcuts import reverse
-from .models import LegoSet
+from cart.models import LegoSet
 from .forms import MarketingForm
 
 # Create your views here.
