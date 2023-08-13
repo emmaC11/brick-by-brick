@@ -13,6 +13,7 @@ class LegoSetTheme(models.Model):
 
 class LegoSet(models.Model):
     name = models.CharField(max_length=200)
+    slug = models.SlugField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     piece_count = models.PositiveIntegerField()
     item_number = models.PositiveIntegerField()
