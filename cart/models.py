@@ -51,3 +51,7 @@ class Order(models.Model):
     def __str__(self):
         return self.user.username
     pass
+
+    @property
+    def reference_number(self):
+        return f"ORDER-{self.pk}"
