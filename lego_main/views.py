@@ -24,6 +24,11 @@ class MarketingFormView(generic.FormView):
         email = form.cleaned_data.get("email")
 
         form_data = "Add user to marketing email list: {email}".format(email=email)
+
+        send_mail(
+            subject="New marketing email subscriber!",
+            message=form_data,
+        )
         return super(MarketingFormView).form_valid(form)
     
         
