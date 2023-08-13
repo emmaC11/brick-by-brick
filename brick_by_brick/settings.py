@@ -63,6 +63,11 @@ INSTALLED_APPS = [
     'brick_by_brick'
 ]
 
+DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
+NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL")
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 SITE_ID = 1
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 LOGIN_REDIRECT_URL = '/'

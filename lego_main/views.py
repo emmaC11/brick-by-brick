@@ -1,7 +1,9 @@
+from django.conf import settings
 from django.core.mail import send_mail
 from django.contrib import messages
-from django.shortcuts import render
+from django.shortcuts import render, reverse
 from django.views import generic
+#from django.shortcuts import reverse
 from .models import LegoSet
 from .forms import MarketingForm
 
@@ -28,8 +30,10 @@ class MarketingFormView(generic.FormView):
         send_mail(
             subject="New marketing email subscriber!",
             message=form_data,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.NOTIFY_EMAIL]
         )
-        return super(MarketingFormView).form_valid(form)
+        return super(MarketingFormView, self).form_valid(form)
     
         
 
