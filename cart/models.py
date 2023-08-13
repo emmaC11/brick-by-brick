@@ -68,6 +68,9 @@ class Order(models.Model):
     items = models.ManyToManyField(OrderItem)
     order_date = models.DateTimeField()
     ordered = models.BooleanField(default=False)
+    # order is linked to an address
+    billing_address = models.ForeignKey(Address, related_name="billing_address", blank=True, null=True, on_delete=models.SET_NULL)
+    shipping_address = models.ForeignKey(Address, related_name="shipping_address", blank=True, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
         return self.user.username, self.reference_number
