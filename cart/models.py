@@ -31,6 +31,9 @@ class LegoSet(models.Model):
 
 # when a lego set is added to the cart it becomes an order item
 class OrderItem(models.Model):
+    # specify the order item that is associated with a user & a order
+    order = models.ForeignKey("Order", related_name="items", on_delete=models.CASCADE)
+
     item = models.ForeignKey(LegoSet, on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=1)
     
