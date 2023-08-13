@@ -19,6 +19,9 @@ class Address(models.Model):
 
     def __str__(self):
         return self.address_line_1
+    
+    class Meta:
+        verbose_name_plural = 'Addresses'
 
 
 class LegoSetTheme(models.Model):
