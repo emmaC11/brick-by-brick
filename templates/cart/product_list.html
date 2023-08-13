@@ -2,7 +2,17 @@
 {% block content %}
 <p>this is product_list.html</p>
 
-{% for legoset in object_list %}
-<p> {{ legoset }}</p>
-{% endfor %}
+<div class="container mx-auto py-8">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {% for legoset in object_list %}
+        <div class="bg-white p-6 shadow-md rounded-lg">
+            <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mb-4 max-h-96">
+            <h3 class="text-xl font-semibold mb-2">{{ legoset.name }}</h3>
+            <p class="mt-2">{{ legoset.price }}</p>
+            <p class="text-gray-600"><i class="fa-solid fa-cake-candles"></i>{{ legoset.ages }}</p>
+            <a href="" class="bg-orange text-black font-semibold rounded-md py-2 px-3" > <i class="fa-solid fa-bag-shopping"></i>Add to Bag</a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
