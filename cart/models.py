@@ -80,5 +80,15 @@ class Order(models.Model):
     def reference_number(self):
         return f"ORDER-{self.pk}"
     
+
 class Payment(models.Model):
-    
+    # payment is linked to an order
+    order = models.ForeignKey(Order, related_name='payments', on_delete=models.CASCADE)
+    payment_method = models.CharField(max_length=20,choices=(
+        ('PayPal', 'PayPal'),
+    ))
+    timestamp = models.DateTimeField(auto_now_add=True)
+    payment_successful = models.BooleanField(default=False)
+    amount = models.FloatField()
+    raw_response = models.TextField()
+
