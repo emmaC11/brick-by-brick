@@ -27,15 +27,15 @@ class LegoSetDetailView(generic.FormView):
         order = get_or_set_order_session(self.request)
         legoset = self.get_object()
 
-        item_filter = order.items.filter(product=legoset)
+        item_filter = order.items.filter(item=legoset)
         if item_filter.exists():
             item = item_filter.first()
             item.quantity += int(form.cleaned_data['quantity'])
             item.save()
         else:
             new_item = form.save(commit=False)
-            new_item.product = legoset
-            new_item.order = order
+            new_item.item = legoset
+            new_item.userOrder = order
             new_item.save()
 
         return super(LegoSetDetailView, self).form_valid(form)
