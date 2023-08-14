@@ -22,5 +22,7 @@ class LegoSetDetailView(generic.FormView):
         return reverse("home")
     
     def form_valid(self, form):
+        order = get_or_set_order_session(self.request)
+
         return super(LegoSetDetailView, self).form_valid(form)
 
