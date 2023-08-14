@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404  
 from django.views import generic
+from .forms import AddToCartForm
 from cart.models import LegoSet
 from .utils import get_or_set_order_session
 from django.urls import reverse
