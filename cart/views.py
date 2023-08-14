@@ -23,6 +23,7 @@ class LegoSetDetailView(generic.FormView):
     
     def form_valid(self, form):
         order = get_or_set_order_session(self.request)
+        legoSet = self.get_object()
 
         return super(LegoSetDetailView, self).form_valid(form)
 
