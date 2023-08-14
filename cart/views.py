@@ -1,7 +1,8 @@
-from django.shortcuts import render, get_object_or_404    
+from django.shortcuts import render, get_object_or_404  
 from django.views import generic
 from cart.models import LegoSet
 from .utils import get_or_set_order_session
+from django.urls import reverse
 
 
 class ProductListView(generic.ListView):
@@ -15,4 +16,7 @@ class LegoSetDetailView(generic.FormView):
 
     def get_object(self):
         return get_object_or_404(LegoSet, slug=self.kwargs['slug'])
+    
+    def get_success_url(self):
+        return reverse("home")
 
