@@ -18,25 +18,31 @@ class LegoSetDetailView(generic.FormView):
     # queryset = LegoSet.objects.all()
 
     def get_object(self):
-        return get_object_or_404(LegoSet, slug=self.kwargs['slug'])
+        return get_object_or_404(LegoSet, slug=self.kwargs["slug"])
     
     def get_success_url(self):
         return reverse("home")
     
     def form_valid(self, form):
         order = get_or_set_order_session(self.request)
-        legoSet = self.get_object()
+        legoset = self.get_object()
 
-        item_filter = order.items.filter(product=legoSet)
+        item_filter = order.items.filter(product=legoset)
         if item_filter.exists():
             item = item_filter.first()
             item.quantity += int(form.cleaned_data['quantity'])
             item.save()
         else:
             new_item = form.save()
-            new_item.product = legoSet
+            new_item.product = legoset
             new_item.order = order
             new_item.save()
 
         return super(LegoSetDetailView, self).form_valid(form)
 
+    def get_context_data(self, **kwargs):
+        context = super(LegoSetDetailView, self).get_context_data(**kwargs)
+        context['legoset'] = self.get_object()
+        return context
+    
+    
