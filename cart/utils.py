@@ -20,4 +20,9 @@ def get_or_set_order_session(request):
             order.save()
             request.session['order_id'] = order.id
 
-    
+    # check if user is authenticated
+    if request.user.is_authenticated and order.user is None:
+        order.user = request.user
+        order.save()
+
+    return order
