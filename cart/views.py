@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from cart.models import LegoSet
-from .utils import get_cart_items_and_total
+from .utils import get_or_set_order_session
 
 
 class ProductListView(generic.ListView):
