@@ -33,7 +33,7 @@ class LegoSetDetailView(generic.FormView):
             item.quantity += int(form.cleaned_data['quantity'])
             item.save()
         else:
-            new_item = form.save()
+            new_item = form.save(commit=False)
             new_item.product = legoset
             new_item.order = order
             new_item.save()
