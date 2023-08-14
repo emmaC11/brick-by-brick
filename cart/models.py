@@ -63,7 +63,7 @@ class OrderItem(models.Model):
     quantity = models.PositiveIntegerField(default=1)
     
     def __str__(self):
-        return self.item.name
+        return f"{self.quantity} x {self.item.name}"
 
 
 class Order(models.Model):
@@ -77,7 +77,7 @@ class Order(models.Model):
     shipping_address = models.ForeignKey(Address, related_name="shipping_address", blank=True, null=True, on_delete=models.SET_NULL)
 
     def __str__(self):
-        return self.user.username, self.reference_number
+        return self.reference_number
     pass
 
     @property
