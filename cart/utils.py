@@ -11,4 +11,13 @@ def get_or_set_order_session(request):
         order.save()
         request.session['order_id'] = order.id
 
+    # if order id is in session, we want to get the order
+    else:
+        try:
+            order = Order.objects.get(id=order_id, ordered=False)
+        except Order.DoesNotExist:
+            order = Order()
+            order.save()
+            request.session['order_id'] = order.id
+
     
