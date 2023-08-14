@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, get_object_or_404  
 from django.views import generic
 from cart.models import LegoSet
@@ -19,4 +20,7 @@ class LegoSetDetailView(generic.FormView):
     
     def get_success_url(self):
         return reverse("home")
+    
+    def form_valid(self, form):
+        return super(LegoSetDetailView, self).form_valid(form)
 
