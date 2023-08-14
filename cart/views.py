@@ -14,6 +14,7 @@ class ProductListView(generic.ListView):
 
 class LegoSetDetailView(generic.FormView):
     template_name = 'cart/product.html'
+    form_class = AddToCartForm
     # queryset = LegoSet.objects.all()
 
     def get_object(self):
@@ -25,6 +26,17 @@ class LegoSetDetailView(generic.FormView):
     def form_valid(self, form):
         order = get_or_set_order_session(self.request)
         legoSet = self.get_object()
+
+        item_filter = order.items.filter(product=legoSet)
+        if item_filter.exists():
+            item = item_filter.first()
+            item.quantity += int(form.cleaned_data['quantity'])
+            item.save()
+        else:
+            new_item = form.save()
+            new_item.product = legoSet
+            new_item.order = order
+            new_item.save()
 
         return super(LegoSetDetailView, self).form_valid(form)
 
