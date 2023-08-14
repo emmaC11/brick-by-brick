@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load crispy_forms_tags %}
 {% block content %}
 
  <!-- Product info & image -->
@@ -61,8 +62,11 @@
             <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
         </a>
     </div>
-    <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange px-8 py-3 text-base font-medium text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
-
+    <form>
+      {% csrf_token %}
+      {{ form|crispy }}
+      <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange px-8 py-3 text-base font-medium text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
+    </form>
   </div>
 </div>
 
