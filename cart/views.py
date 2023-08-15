@@ -46,12 +46,12 @@ class LegoSetDetailView(generic.FormView):
         context['legoset'] = self.get_object()
         return context
     
-    # want to see items in our cart
-
-    class CartView(generic.TemplateView):
-        def get_context_data(self, **kwargs):
-            context = super(CartView, self).get_context_data(**kwargs)
-            context["order"] = get_or_set_order_session(self.request)
+    
+# want to see items in our cart
+class CartView(generic.TemplateView):
+    def get_context_data(self, **kwargs):
+        context = super(CartView, self).get_context_data(**kwargs)
+        context["userOrder"] = get_or_set_order_session(self.request)
         
     
     
