@@ -28,7 +28,7 @@ class LegoSetDetailView(generic.FormView):
         order = get_or_set_order_session(self.request)
         legoset = self.get_object()
 
-        item_filter = order.items.filter(item=legoset)
+        item_filter = order.legoorderitems.filter(item=legoset)
         if item_filter.exists():
             item = item_filter.first()
             item.quantity += int(form.cleaned_data['quantity'])
@@ -38,6 +38,9 @@ class LegoSetDetailView(generic.FormView):
             new_item.item = legoset
             new_item.userOrder = order
             new_item.save()
+
+        print('below is the order items count')
+        print(order.legoorderitems.count())
 
         return super(LegoSetDetailView, self).form_valid(form)
 
@@ -53,7 +56,8 @@ class CartView(generic.TemplateView):
     
     def get_context_data(self, **kwargs):
         context = super(CartView, self).get_context_data(**kwargs)
-        context["userOrder"] = get_or_set_order_session(self.request)
+        context["order"] = get_or_set_order_session(self.request)
+        return context
         
     
     

@@ -69,7 +69,7 @@ class OrderItem(models.Model):
 class Order(models.Model):
     # associate order with a user
     user = models.ForeignKey(User, blank=True, null=True, on_delete=models.CASCADE)
-    items = models.ManyToManyField(OrderItem)
+    # items = models.ManyToManyField(OrderItem)
     order_date = models.DateTimeField(auto_now_add=True)
     ordered = models.BooleanField(default=False)
     # order is linked to an address

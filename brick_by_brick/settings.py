@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
     'brick-by-brickk-8a85ca9be3ac.herokuapp.com',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu102.gitpod.io',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu103.gitpod.io',
+    '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu104.gitpod.io',
     'localhost'
 ]
 
