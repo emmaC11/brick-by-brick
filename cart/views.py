@@ -82,8 +82,10 @@ class DecrementLegoSetQuantityView(generic.View):
             order_item.quantity -= 1
             order_item.save()
         return redirect("cart:cart_summary")
-    
+
+
 class RemoveLegoSetFromCartView(generic.View):
     def get(self, request, *args, **kwargs):
-
+        order_item = get_object_or_404(OrderItem, id=kwargs['pk'])
+        order_item.delete()
         return redirect("cart:cart_summary")
