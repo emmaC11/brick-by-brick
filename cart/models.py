@@ -70,7 +70,11 @@ class OrderItem(models.Model):
         return f"{self.quantity} x {self.item.name}"
     
     def get_raw_legoset_total(self):
-        return self.quantity * self.item.price 
+        return self.quantity * self.item.price
+    
+    def get_legoset_total(self):
+        price = self.get_raw_legoset_total()
+        return "{:.2f}".format(price/100)
 
 
 class Order(models.Model):
