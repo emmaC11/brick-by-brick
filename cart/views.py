@@ -66,4 +66,4 @@ class IncrementLegoSetQuantity(generic.View):
         order_item = get_object_or_404(OrderItem, id=kwargs['pk'])
         order_item.quantity += 1
         order_item.save()
-        return redirect("cart:summary")
+        return redirect("cart:cart_summary")
