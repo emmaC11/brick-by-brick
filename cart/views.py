@@ -61,3 +61,6 @@ class CartView(generic.TemplateView):
         
     
 class IncrementLegoSetQuantity(generic.View):
+    def get(self, request, *args, **kwargs):
+        # increment LegoSet quantity & redirect to the cart
+        
