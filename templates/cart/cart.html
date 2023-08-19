@@ -18,7 +18,7 @@
               <!-- used snippet for item quantity div from - https://github.com/justdjango/django-simple-ecommerce/blob/8-cart-view/templates/cart/cart.html -->
               <div class=" item-quantity input-group mb-3" style="max-width: 120px;">
                 <div class="input-group-prepend">
-                    <a href="#" class="btn btn-outline-primary">
+                    <a href="{% url 'cart:decrease_quantity' pk=item.id %}" class="btn btn-outline-primary">
                         &minus;
                     </a>
                 </div>
