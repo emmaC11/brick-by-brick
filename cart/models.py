@@ -68,6 +68,9 @@ class OrderItem(models.Model):
     
     def __str__(self):
         return f"{self.quantity} x {self.item.name}"
+    
+    def get_raw_legoset_total(self):
+        return self.quantity * self.item.price 
 
 
 class Order(models.Model):
