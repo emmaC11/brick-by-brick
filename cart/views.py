@@ -1,6 +1,6 @@
 from typing import Any, Dict
 from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404  
+from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
 from .forms import AddToCartForm
 from cart.models import LegoSet
@@ -63,4 +63,4 @@ class CartView(generic.TemplateView):
 class IncrementLegoSetQuantity(generic.View):
     def get(self, request, *args, **kwargs):
         # increment LegoSet quantity & redirect to the cart
-        
+        return redirect("cart:summary")
