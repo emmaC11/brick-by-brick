@@ -60,4 +60,4 @@ class CartView(generic.TemplateView):
         return context
         
     
-    
+class IncrementLegoSetQuantity(generic.View):
