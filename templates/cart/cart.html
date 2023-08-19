@@ -57,13 +57,13 @@
         </div>
         <div class="flex justify-between">
           <p class="text-gray-700">Shipping</p>
-          <p class="text-gray-700">default shipping charge</p>
+          <p class="text-gray-700">€5</p>
         </div>
         <hr class="my-4" />
         <div class="flex justify-between">
           <p class="text-lg font-bold">Total</p>
           <div class="">
-            <p class="mb-1 text-lg font-bold">total cost with shipping</p>
+            <p class="mb-1 text-lg font-bold">€{{ order.get_order_total}}</p>
           </div>
         </div>
         <a href="" class="bg-orange text-black font-semibold rounded-md py-2 px-3" > <i class="fa-brands fa-paypal"></i>  Checkout Securely</a>
