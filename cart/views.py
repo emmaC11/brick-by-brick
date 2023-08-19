@@ -67,10 +67,18 @@ class IncrementLegoSetQuantity(generic.View):
         order_item.quantity += 1
         order_item.save()
         return redirect("cart:cart_summary")
-    
-class DecreaseLegoSetQuantity(generic.View):
+
+ 
+class DecreaseQuantityView(generic.View):
     def get(self, request, *args, **kwargs):
         # increment LegoSet quantity & redirect to the cart
         order_item = get_object_or_404(OrderItem, id=kwargs['pk'])
-        
+
+        # delete order item object if quantity is less than or equal to one
+        if order_item.quantity <= 1:
+            order_item.delete()
+        # decrement
+        else:
+            order_item.quantity -= 1
+            order_item.save()
         return redirect("cart:cart_summary")
