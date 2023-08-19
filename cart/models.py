@@ -95,7 +95,7 @@ class Order(models.Model):
     def reference_number(self):
         return f"ORDER-{self.pk}"
     
-    def get_legoset_raw_subtotal(self):
+    def get_order_raw_subtotal(self):
         total = 0
         # append variable total with the total of each order item
         for order_item in self.legoorderitems.all():
