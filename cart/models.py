@@ -95,6 +95,14 @@ class Order(models.Model):
     def reference_number(self):
         return f"ORDER-{self.pk}"
     
+    def get_legoset_raw_subtotal(self):
+        total = 0
+        # append variable total with the total of each order item
+        for order_item in self.legoorderitems.all():
+            total += order_item.get_raw_legoset_total()
+        return total
+
+    
 
 class Payment(models.Model):
     # payment is linked to an order
