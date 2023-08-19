@@ -55,7 +55,7 @@ class LegoSet(models.Model):
     
     def get_legoset_price(self):
         # divide by 100 to get the price in euro/chosen currency
-        return "{}".format(self.price/100)
+        return "{:.2f}".format(self.price/100)
 
 
 # when a lego set is added to the cart it becomes an order item
