@@ -24,7 +24,7 @@
                 </div>
                 <input type="text" class="form-control text-center" value="{{ item.quantity }}">
                 <div class="input-group-append">
-                    <a href="{% url 'cart:increase-quantity' pk=item.id %}" class="btn btn-outline-primary">
+                    <a href="{% url 'cart:increase_quantity' pk=item.id %}" class="btn btn-outline-primary">
                         &plus;
                     </a>
                 </div>
