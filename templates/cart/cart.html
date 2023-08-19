@@ -40,6 +40,11 @@
             </div>
           </div>
         </div>
+        {% empty %}
+        <div class="cart-empty">
+          <p> You don't have anything in your bag </p>
+          <a class="bg-orange text-black font-semibold rounded-md py-2 px-3" href="{% url 'cart:product_list' %}">Start shopping</a>
+      </div>
         {% endfor %}
         
       </div>
