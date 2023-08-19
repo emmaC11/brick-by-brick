@@ -101,6 +101,10 @@ class Order(models.Model):
         for order_item in self.legoorderitems.all():
             total += order_item.get_raw_legoset_total()
         return total
+    
+    def get_order_subtotal(self):
+        subtotal = self.get_order_raw_subtotal()
+        return "{:.2f}".format(subtotal/100)
 
     
 
