@@ -84,3 +84,6 @@ class DecrementLegoSetQuantityView(generic.View):
         return redirect("cart:cart_summary")
     
 class RemoveLegoSetFromCartView(generic.View):
+    def get(self, request, *args, **kwargs):
+
+        return redirect("cart:cart_summary")
