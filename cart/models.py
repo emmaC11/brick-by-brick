@@ -105,6 +105,13 @@ class Order(models.Model):
     def get_order_subtotal(self):
         subtotal = self.get_order_raw_subtotal()
         return "{:.2f}".format(subtotal/100)
+    
+    def get_order_raw_total(self):
+        subtotal = self.get_order_raw_subtotal()
+        # add default 5 euro shipping costs
+        shipping_costs = 500
+        return subtotal + shipping_costs
+    
 
     
 
