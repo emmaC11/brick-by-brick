@@ -112,6 +112,10 @@ class Order(models.Model):
         shipping_costs = 500
         return subtotal + shipping_costs
     
+    def get_order_total(self):
+        total = self.get_order_raw_total()
+        return "{:.2f}".format(total/100)
+    
 
     
 
