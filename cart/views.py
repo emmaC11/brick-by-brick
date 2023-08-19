@@ -3,7 +3,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
 from .forms import AddToCartForm
-from cart.models import LegoSet
+from cart.models import LegoSet, OrderItem
 from .utils import get_or_set_order_session
 from django.urls import reverse
 
@@ -63,4 +63,7 @@ class CartView(generic.TemplateView):
 class IncrementLegoSetQuantity(generic.View):
     def get(self, request, *args, **kwargs):
         # increment LegoSet quantity & redirect to the cart
+        order_item = get_object_or_404(OrderItem, id=kwargs['pk'])
+        order_item.quantity += 1
+        order_item.save()
         return redirect("cart:summary")
