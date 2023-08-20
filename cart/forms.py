@@ -11,15 +11,15 @@ class AddToCartForm(forms.ModelForm):
 
 class AddressForm(forms.Form):
     # defining shipping & billing address within same form
-    shipping_address_line_1 = forms.CharField()
-    shipping_address_line_2 = forms.CharField()
-    shipping_city = forms.CharField()
-    shipping_postal_code = forms.CharField()
+    shipping_address_line_1 = forms.CharField(required=False)
+    shipping_address_line_2 = forms.CharField(required=False)
+    shipping_city = forms.CharField(required=False)
+    shipping_postal_code = forms.CharField(required=False)
 
-    billing_address_line_1 = forms.CharField()
-    billing_address_line_2 = forms.CharField()
-    billing_city = forms.CharField()
-    billing_postal_code = forms.CharField()
+    billing_address_line_1 = forms.CharField(required=False)
+    billing_address_line_2 = forms.CharField(required=False)
+    billing_city = forms.CharField(required=False)
+    billing_postal_code = forms.CharField(required=False)
 
     selected_shipping_address = forms.ModelChoiceField(
         Address.objects.none(), required=False
