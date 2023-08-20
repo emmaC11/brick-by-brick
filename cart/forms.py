@@ -24,6 +24,6 @@ class AddressForm(forms.Form):
     selected_shipping_address = forms.ModelChoiceField(
         Address.objects.none(), required=False
     )
-    
-
-    
+    selected_billing_address = forms.ModelChoiceField(
+        Address.objects.none(), required=False
+    ) 
