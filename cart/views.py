@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.contrib import messages
 from typing import Any, Dict
 from django.http import HttpResponse
@@ -150,3 +151,8 @@ class CheckoutView(generic.FormView):
 
 class PaymentView(generic.TemplateView):
     template_name = 'cart/payment.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(CheckoutView, self).get_context_data(**kwargs)
+        context["PAYPAL_CLIENT_ID"] = settings.PAYPAL_CLIENT_ID
+        return context
