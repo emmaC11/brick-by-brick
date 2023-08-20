@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<p>this is payment.html</p>
+<div class="order_summary text-center">
+    <h4>Select a payment method</h4>
+    <p>Order total: ${{ order.get_order_total }}</p>
+</div>
 <div class="flex justify-center">
 <div id="paypal-button-container"></div>
 </div>
