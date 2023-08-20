@@ -157,3 +157,7 @@ class PaymentView(generic.TemplateView):
         context["PAYPAL_CLIENT_ID"] = settings.PAYPAL_CLIENT_ID
         context['order'] = get_or_set_order_session(self.request)
         return context
+
+
+class OrderCompleteView(generic.TemplateView):
+    template_name = 'cart/order_complete.html'
