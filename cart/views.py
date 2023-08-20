@@ -161,6 +161,7 @@ class PaymentView(generic.TemplateView):
 
 class OrderConfirmedView(generic.View):
     def post(self, request, *args, **kwargs):
+        # temp print statements to see what is being sent to the server
         print(request.body)
         print(request.data)
         return HttpResponse("OK")
