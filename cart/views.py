@@ -159,5 +159,11 @@ class PaymentView(generic.TemplateView):
         return context
 
 
+class OrderConfirmedView(generic.View):
+    def post(self, request, *args, **kwargs):
+        print(request.body)
+        print(request.data)
+        return HttpResponse("OK")
+
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'
