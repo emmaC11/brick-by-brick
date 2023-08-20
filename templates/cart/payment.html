@@ -58,9 +58,9 @@
                 // send request so we know payment has been successful
                 console.log(details);
                 sendOrderConfirmed(details).then(res => {
-                    // setTimeout(function () {
-                    // window.location.href = "{% url 'cart:order_complete' %}";
-                    // }, 2000);
+                    setTimeout(function () {
+                    window.location.href = "{% url 'cart:order_complete' %}";
+                    }, 2000);
                 });
             
           
