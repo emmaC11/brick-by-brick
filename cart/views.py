@@ -176,6 +176,7 @@ class OrderConfirmedView(generic.View):
             amount=float(body['purchase_units'][0]['amount']['value'],),
             payment_method='PayPal',
         )
+        order.ordered = True
         return JsonResponse({"data": "OK"})
 
 
