@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
 from .forms import AddToCartForm, AddressForm
-from cart.models import LegoSet, OrderItem
+from cart.models import LegoSet, OrderItem, Address
 from .utils import get_or_set_order_session
 from django.urls import reverse
 
@@ -99,6 +99,20 @@ class CheckoutView(generic.FormView):
         order = get_or_set_order_session(self.request)
         selected_shipping_address = form.cleaned_data.get('selected_shipping_address')
         selected_billing_address = form.cleaned_data.get('selected_shipping_address')
+
+        # use address from dropdown if selected or create new address using Address model
+        if selected_shipping_address:
+            order.shipping_address = selected_shipping_address
+        else:
+            address = Address.objects.create(
+                user=self.request.user,
+                shipping_address_line_1=form.cleaned_data['shipping_address_line_1'],
+                shipping_address_line_2=form.cleaned_data['shipping_address_line_2'],
+                shipping_city=form.cleaned_data['shipping_city'],
+                shipping_postal_code=form.cleaned_data['shipping_postal_code'],
+            )
+            order.shipping_address = address
+        order.save()
 
        
 
