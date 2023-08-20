@@ -37,3 +37,13 @@ class AddressForm(forms.Form):
         super().__init__(*args, **kwargs)
 
         user = User.objects.get(id=user_id)
+
+        shipping_address_qs = Address.objects.filter(
+            user=user,
+            address_type='S'
+        )
+
+        billing_address_qs = Address.objects.filter(
+            user=user,
+            address_type='B'
+        )
