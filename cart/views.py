@@ -114,6 +114,20 @@ class CheckoutView(generic.FormView):
             order.shipping_address = address
         order.save()
 
+        if selected_billing_address:
+            order.billing_address = selected_billing_address
+        else:
+            address = Address.objects.create(
+                user=self.request.user,
+                billing_address_line_1=form.cleaned_data['billing_address_line_1'],
+                billing_address_line_2=form.cleaned_data['billing_address_line_2'],
+                billing_city=form.cleaned_data['billing_city'],
+                billing_postal_code=form.cleaned_data['billing_postal_code'],
+            )
+            order.billing_address = address
+        order.save()
+
+
        
 
         messages.info(
