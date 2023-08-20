@@ -153,6 +153,6 @@ class PaymentView(generic.TemplateView):
     template_name = 'cart/payment.html'
 
     def get_context_data(self, **kwargs):
-        context = super(CheckoutView, self).get_context_data(**kwargs)
+        context = super(PaymentView, self).get_context_data(**kwargs)
         context["PAYPAL_CLIENT_ID"] = settings.PAYPAL_CLIENT_ID
         return context
