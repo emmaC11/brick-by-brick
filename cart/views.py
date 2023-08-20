@@ -105,11 +105,12 @@ class CheckoutView(generic.FormView):
             order.shipping_address = selected_shipping_address
         else:
             address = Address.objects.create(
+                address_type='S',
                 user=self.request.user,
-                shipping_address_line_1=form.cleaned_data['shipping_address_line_1'],
-                shipping_address_line_2=form.cleaned_data['shipping_address_line_2'],
-                shipping_city=form.cleaned_data['shipping_city'],
-                shipping_postal_code=form.cleaned_data['shipping_postal_code'],
+                address_line_1=form.cleaned_data['shipping_address_line_1'],
+                address_line_2=form.cleaned_data['shipping_address_line_2'],
+                city=form.cleaned_data['shipping_city'],
+                postal_code=form.cleaned_data['shipping_postal_code'],
             )
             order.shipping_address = address
         order.save()
@@ -118,17 +119,15 @@ class CheckoutView(generic.FormView):
             order.billing_address = selected_billing_address
         else:
             address = Address.objects.create(
+                address_type='B',
                 user=self.request.user,
-                billing_address_line_1=form.cleaned_data['billing_address_line_1'],
-                billing_address_line_2=form.cleaned_data['billing_address_line_2'],
-                billing_city=form.cleaned_data['billing_city'],
-                billing_postal_code=form.cleaned_data['billing_postal_code'],
+                address_line_1=form.cleaned_data['billing_address_line_1'],
+                address_line_2=form.cleaned_data['billing_address_line_2'],
+                city=form.cleaned_data['billing_city'],
+                postal_code=form.cleaned_data['billing_postal_code'],
             )
             order.billing_address = address
         order.save()
-
-
-       
 
         messages.info(
             self.request, "Thank you! You have added your address details.")
