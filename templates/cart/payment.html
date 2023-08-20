@@ -14,8 +14,12 @@
 <script src="https://www.paypal.com/sdk/js?client-id={{ PAYPAL_CLIENT_ID }}"></script>
 <script>
 
-    function sendOrderConfirmed() {
-        return fetch("{% url 'cart:order_confirmed'%}")
+    function sendOrderConfirmed(details) {
+        return fetch("{% url 'cart:order_confirmed'%}", {
+            // configuration for request
+            method: "post",
+            body: JSON.stringify(details)
+        })
 
     }
     paypal.Buttons({
