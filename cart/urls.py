@@ -12,4 +12,5 @@ urlpatterns = [
     path('remove_from_cart/<pk>/', views.RemoveLegoSetFromCartView.as_view(), name='remove_from_cart'),
     path('checkout/', views.CheckoutView.as_view(), name='checkout'),
     path('payment/', views.PaymentView.as_view(), name='payment'),
+    path('order_complete/', views.OrderCompleteView.as_view(), name='order_complete'),
 ]
