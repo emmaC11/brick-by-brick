@@ -1,5 +1,9 @@
+from django.contrib.auth import get_user_model
 from django import forms
 from cart.models import OrderItem, Address
+
+
+User = get_user_model()
 
 
 class AddToCartForm(forms.ModelForm):
@@ -26,4 +30,10 @@ class AddressForm(forms.Form):
     )
     selected_billing_address = forms.ModelChoiceField(
         Address.objects.none(), required=False
-    ) 
+    )
+
+    def __init__(self, *args, **kwargs):
+        user_id = kwargs.pop('user_id')
+        super().__init__(*args, **kwargs)
+
+        user = User.objects.get(id=user_id)
