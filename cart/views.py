@@ -94,6 +94,9 @@ class CheckoutView(generic.FormView):
     template_name = 'cart/checkout.html'
     form_class = AddressForm
 
+    def form_valid(self,form):
+        return super(CheckoutView, self).form_valid(form)
+
     def get_form_kwargs(self):
         kwargs = super(CheckoutView, self).get_form_kwargs()
         kwargs['user_id'] = self.request.user.id
