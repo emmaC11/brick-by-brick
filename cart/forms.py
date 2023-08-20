@@ -1,5 +1,5 @@
 from django import forms
-from cart.models import OrderItem
+from cart.models import OrderItem, Address
 
 
 class AddToCartForm(forms.ModelForm):
@@ -20,6 +20,10 @@ class AddressForm(forms.Form):
     billing_address_line_2 = forms.CharField()
     billing_city = forms.CharField()
     billing_postal_code = forms.CharField()
+
+    selected_shipping_address = forms.ModelChoiceField(
+        Address.objects.none(), required=False
+    )
     
 
     
