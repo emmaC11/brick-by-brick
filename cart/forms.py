@@ -56,3 +56,14 @@ class AddressForm(forms.Form):
     # if shipping or billing address is selected, then the other address is not required
     def clean(self):
         data = self.cleaned_data
+
+        selected_shipping_address = data.get('selected_shipping_address', None)
+        if selected_shipping_address is None:
+            if not data.get('shipping_address_line_1', None):
+                self.add_error('shipping_address_line_1', 'Please fill in this field')
+            if not data.get('shipping_address_line_2', None):
+                self.add_error('shipping_address_line_2', 'Please fill in this field')
+            if not data.get('shipping_city', None):
+                self.add_error('shipping_city', 'Please fill in this field')
+            if not data.get('shipping_postal_code', None):
+                self.add_error('shipping_postal_code', 'Please fill in this field')
