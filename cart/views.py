@@ -7,7 +7,7 @@ from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
 from .forms import AddToCartForm, AddressForm
-from cart.models import LegoSet, OrderItem, Address
+from cart.models import LegoSet, OrderItem, Address, Payment
 from .utils import get_or_set_order_session
 from django.urls import reverse
 
@@ -163,9 +163,15 @@ class PaymentView(generic.TemplateView):
 
 class OrderConfirmedView(generic.View):
     def post(self, request, *args, **kwargs):
+        order = get_or_set_order_session(self.request)
         body = json.loads(request.body)
         # temp print statements to see what is being sent to the server
+
+        # want to save this data to our order model
         print(body)
+        payment = Payment.objects.create(
+            order=order
+        )
         return JsonResponse({"data": "OK"})
 
 
