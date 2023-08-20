@@ -170,7 +170,11 @@ class OrderConfirmedView(generic.View):
         # want to save this data to our order model
         print(body)
         payment = Payment.objects.create(
-            order=order
+            order=order,
+            payment_successful=True,
+            raw_response=json.dumps(body),
+            amount=float(body['purchase_units'][0]['amount']['value'],),
+            payment_method='PayPal',
         )
         return JsonResponse({"data": "OK"})
 
