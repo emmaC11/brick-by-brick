@@ -8,7 +8,6 @@ class AddToCartForm(forms.ModelForm):
         model = OrderItem
         fields = ['quantity']
 
+
 class AddressForm(forms.Form):
-    
-
-
+    pass
