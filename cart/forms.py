@@ -47,3 +47,6 @@ class AddressForm(forms.Form):
             user=user,
             address_type='B'
         )
+
+        self.fields['selected_shipping_address'].queryset = shipping_address_qs
+        self.fields['selected_billing_address'].queryset = billing_address_qs
