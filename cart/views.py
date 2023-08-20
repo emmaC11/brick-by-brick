@@ -89,3 +89,7 @@ class RemoveLegoSetFromCartView(generic.View):
         order_item = get_object_or_404(OrderItem, id=kwargs['pk'])
         order_item.delete()
         return redirect("cart:cart_summary")
+
+class CheckoutView(generic.FormView):
+    
+   
