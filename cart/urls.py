@@ -11,4 +11,5 @@ urlpatterns = [
     path('decrease_quantity/<pk>/', views.DecrementLegoSetQuantityView.as_view(), name='decrease_quantity'),
     path('remove_from_cart/<pk>/', views.RemoveLegoSetFromCartView.as_view(), name='remove_from_cart'),
     path('checkout/', views.CheckoutView.as_view(), name='checkout'),
+    path('payment/', views.PaymentView.as_view(), name='payment'),
 ]
