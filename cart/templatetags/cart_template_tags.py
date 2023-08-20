@@ -4,4 +4,5 @@ register = template.Library()
 
 
 @register.filter
-def cart_item_count()
+def cart_item_count(request):
+    
