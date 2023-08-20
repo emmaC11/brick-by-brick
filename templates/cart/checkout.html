@@ -11,6 +11,11 @@
     </div>
     {% else %}
     <p>form</p>
+    <form method="POST" class="address-form">
+        {{ csfr_token }}
+        
+    </form>
+
     {% endif %}
 </div>
 {% endblock %}
