@@ -91,6 +91,7 @@ class RemoveLegoSetFromCartView(generic.View):
         order_item.delete()
         return redirect("cart:cart_summary")
 
+
 class CheckoutView(generic.FormView):
     template_name = 'cart/checkout.html'
     form_class = AddressForm
@@ -146,4 +147,6 @@ class CheckoutView(generic.FormView):
         context["order"] = get_or_set_order_session(self.request)
         return context
 
-   
+
+class PaymentView(generic.TemplateView):
+    template_name = 'cart/payment.html'
