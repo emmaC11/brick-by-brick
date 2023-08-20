@@ -113,7 +113,7 @@ class CheckoutView(generic.FormView):
                 postal_code=form.cleaned_data['shipping_postal_code'],
             )
             order.shipping_address = address
-        order.save()
+      
 
         if selected_billing_address:
             order.billing_address = selected_billing_address
@@ -127,8 +127,8 @@ class CheckoutView(generic.FormView):
                 postal_code=form.cleaned_data['billing_postal_code'],
             )
             order.billing_address = address
-        order.save()
 
+        order.save()
         messages.info(
             self.request, "Thank you! You have added your address details.")
         return super(CheckoutView, self).form_valid(form)
