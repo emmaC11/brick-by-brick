@@ -95,6 +95,9 @@ class CheckoutView(generic.FormView):
     template_name = 'cart/checkout.html'
     form_class = AddressForm
 
+    def get_success_url(self):
+        return reverse("home")
+
     def form_valid(self,form):
         order = get_or_set_order_session(self.request)
         selected_shipping_address = form.cleaned_data.get('selected_shipping_address')
