@@ -24,7 +24,7 @@
             return actions.order.capture().then(function (details) {
             setTimeout(function () {
                 window.location.href = "{% url 'cart:order_complete' %}";
-            }, 5000);
+            }, 2000);
             });
         }
     }).render('#paypal-button-container');
