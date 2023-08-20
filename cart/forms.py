@@ -25,6 +25,7 @@ class AddressForm(forms.Form):
     billing_city = forms.CharField(required=False)
     billing_postal_code = forms.CharField(required=False)
 
+    # storing the selected shipping & billing address from Address model
     selected_shipping_address = forms.ModelChoiceField(
         Address.objects.none(), required=False
     )
