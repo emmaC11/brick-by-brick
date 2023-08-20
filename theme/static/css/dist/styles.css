@@ -1333,6 +1333,10 @@ select {
     margin-top: 0px;
   }
 
+  .md\:ml-5 {
+    margin-left: 1.25rem;
+  }
+
   .md\:flex {
     display: flex;
   }
