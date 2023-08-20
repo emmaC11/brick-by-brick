@@ -35,7 +35,11 @@
         return fetch("{% url 'cart:order_confirmed'%}", {
             // configuration for request
             method: "post",
-            body: JSON.stringify(details)
+            body: JSON.stringify(details),
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": csrftoken,
+            }
         })
 
     }
