@@ -1,3 +1,4 @@
+from django.contrib import messages
 from typing import Any, Dict
 from django.http import HttpResponse
 from django.shortcuts import redirect, render, get_object_or_404  
@@ -95,6 +96,8 @@ class CheckoutView(generic.FormView):
     form_class = AddressForm
 
     def form_valid(self,form):
+        messages.info(
+            self.request, "Thank you! You have added your address details.")
         return super(CheckoutView, self).form_valid(form)
 
     def get_form_kwargs(self):
