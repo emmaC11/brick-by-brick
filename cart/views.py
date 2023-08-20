@@ -94,4 +94,9 @@ class CheckoutView(generic.FormView):
     template_name = 'cart/checkout.html'
     form_class = AddressForm
 
+    def get_context_data(self, **kwargs):
+        context = super(CheckoutView, self).get_context_data(**kwargs)
+        context["order"] = get_or_set_order_session(self.request)
+        return context
+
    
