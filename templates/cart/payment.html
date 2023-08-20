@@ -22,8 +22,9 @@
         },
         onApprove: function (data, actions) {
             return actions.order.capture().then(function (details) {
-                console.log(details);
-                alert('Transaction completed by ' + details.payer.name.given_name + '!');
+            setTimeout(function () {
+                window.location.href = "{% url 'cart:order_complete' %}";
+            }, 5000);
             });
         }
     }).render('#paypal-button-container');
