@@ -13,6 +13,11 @@
 {% block scripts %}
 <script src="https://www.paypal.com/sdk/js?client-id={{ PAYPAL_CLIENT_ID }}"></script>
 <script>
+
+    function sendOrderConfirmed() {
+        return fetch("{% url 'cart:order_confirmed'%}")
+
+    }
     paypal.Buttons({
         createOrder: function (data, actions) {
             return actions.order.create({
@@ -25,6 +30,9 @@
         },
         onApprove: function (data, actions) {
             return actions.order.capture().then(function (details) {
+
+             // send request so we know payment has been successful
+            
             setTimeout(function () {
                 window.location.href = "{% url 'cart:order_complete' %}";
             }, 2000);
