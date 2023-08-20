@@ -1,3 +1,4 @@
+import datetime
 import json
 from django.conf import settings
 from django.contrib import messages
@@ -173,10 +174,12 @@ class OrderConfirmedView(generic.View):
             order=order,
             payment_successful=True,
             raw_response=json.dumps(body),
-            amount=float(body['purchase_units'][0]['amount']['value'],),
+            amount=float(body['purchase_units'][0]['amount']['value']),
             payment_method='PayPal',
         )
         order.ordered = True
+        order.order_date = datetime.date.today()
+        order.save()
         return JsonResponse({"data": "OK"})
 
 

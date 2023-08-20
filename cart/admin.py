@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import LegoSetTheme, LegoSet, OrderItem, Order, Address
+from .models import LegoSetTheme, LegoSet, OrderItem, Order, Address, Payment
 
 
 class AddressAdminDisplay(admin.ModelAdmin):
@@ -17,5 +17,6 @@ admin.site.register(LegoSet)
 admin.site.register(OrderItem)
 admin.site.register(Order)
 admin.site.register(Address, AddressAdminDisplay)
+admin.site.register(Payment)
 
 # Register your models here.
