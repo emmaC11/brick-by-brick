@@ -91,5 +91,7 @@ class RemoveLegoSetFromCartView(generic.View):
         return redirect("cart:cart_summary")
 
 class CheckoutView(generic.FormView):
-    
+    template_name = 'cart/checkout.html'
+    form_class = AddressForm
+
    
