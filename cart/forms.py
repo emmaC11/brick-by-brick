@@ -1,3 +1,4 @@
+from typing import Any, Dict
 from django.contrib.auth import get_user_model
 from django import forms
 from cart.models import OrderItem, Address
@@ -51,3 +52,7 @@ class AddressForm(forms.Form):
 
         self.fields['selected_shipping_address'].queryset = shipping_address_qs
         self.fields['selected_billing_address'].queryset = billing_address_qs
+
+    # if shipping or billing address is selected, then the other address is not required
+    def clean(self):
+        data = self.cleaned_data
