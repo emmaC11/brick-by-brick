@@ -1,7 +1,9 @@
+import json
 from django.conf import settings
 from django.contrib import messages
 from typing import Any, Dict
 from django.http import HttpResponse
+from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
 from .forms import AddToCartForm, AddressForm
@@ -161,10 +163,11 @@ class PaymentView(generic.TemplateView):
 
 class OrderConfirmedView(generic.View):
     def post(self, request, *args, **kwargs):
+        body = json.loads(request.body)
         # temp print statements to see what is being sent to the server
-        print(request.body)
-        print(request.data)
-        return HttpResponse("OK")
+        print(body)
+        return JsonResponse({"data": "OK"})
+
 
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'

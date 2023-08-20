@@ -32,7 +32,7 @@
         var csrftoken = getCookie('csrftoken');
 
     function sendOrderConfirmed(details) {
-        return fetch("{% url 'cart:order_confirmed'%}", {
+        return fetch("{% url 'cart:order_confirmed' %}", {
             // configuration for request
             method: "post",
             body: JSON.stringify(details),
@@ -58,9 +58,9 @@
                 // send request so we know payment has been successful
                 console.log(details);
                 sendOrderConfirmed(details).then(res => {
-                    setTimeout(function () {
-                    window.location.href = "{% url 'cart:order_complete' %}";
-                    }, 2000);
+                    // setTimeout(function () {
+                    // window.location.href = "{% url 'cart:order_complete' %}";
+                    // }, 2000);
                 });
             
           
