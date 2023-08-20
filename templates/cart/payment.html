@@ -1,9 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
-
+<p>this is payment.html</p>
+<div id="paypal-button-container"></div>
 {% endblock content %}
 
 {% block scripts %}
 <script src="https://www.paypal.com/sdk/js?client-id={{ PAYPAL_CLIENT_ID }}"></script>
+<script>
+    paypal.Buttons().render('#paypal-button-container');
+  </script>
 {% endblock scripts %}
