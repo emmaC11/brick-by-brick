@@ -10,4 +10,16 @@ class AddToCartForm(forms.ModelForm):
 
 
 class AddressForm(forms.Form):
-    pass
+    # defining shipping & billing address within same form
+    shipping_address_line_1 = forms.CharField()
+    shipping_address_line_2 = forms.CharField()
+    shipping_city = forms.CharField()
+    shipping_postal_code = forms.CharField()
+
+    billing_address_line_1 = forms.CharField()
+    billing_address_line_2 = forms.CharField()
+    billing_city = forms.CharField()
+    billing_postal_code = forms.CharField()
+    
+
+    
