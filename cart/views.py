@@ -96,6 +96,12 @@ class CheckoutView(generic.FormView):
     form_class = AddressForm
 
     def form_valid(self,form):
+        order = get_or_set_order_session(self.request)
+        selected_shipping_address = form.cleaned_data.get('selected_shipping_address')
+        selected_billing_address = form.cleaned_data.get('selected_shipping_address')
+
+       
+
         messages.info(
             self.request, "Thank you! You have added your address details.")
         return super(CheckoutView, self).form_valid(form)
