@@ -43,7 +43,7 @@
         {% empty %}
         <div class="cart-empty">
           <p> You don't have anything in your bag </p>
-          <a class="bg-orange text-black font-semibold rounded-md py-2 px-3" href="{% url 'cart:product_list' %}">Start shopping</a>
+          <a class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline" href="{% url 'cart:product_list' %}">Start shopping</a>
       </div>
         {% endfor %}
         
@@ -66,7 +66,7 @@
             <p class="mb-1 text-lg font-bold">€{{ order.get_order_total}}</p>
           </div>
         </div>
-        <a href="{% url 'cart:checkout' %}" class="bg-orange text-black font-semibold rounded-md py-2 px-3" > <i class="fa-brands fa-paypal"></i>  Checkout Securely</a>
+        <a href="{% url 'cart:checkout' %}" class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline" > <i class="fa-brands fa-paypal"></i>  Checkout Securely</a>
       </div>
       {% endif %}
     </div>
