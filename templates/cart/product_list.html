@@ -6,14 +6,12 @@
         {% for legoset in object_list %}
         <div class="bg-white p-6 shadow-md rounded-lg w-full h-full border border-gray-300">
             <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mb-4 max-h-64">
-            <a href="{{ legoset.get_legoset }}">
             <h3 class="text-xl font-semibold mb-2">{{ legoset.name }}</h3>
-            </a>
             <p class="mt-2 mb-4">
                 <span class="price">€{{ legoset.get_legoset_price  }}</span>
                 <span class="age ml-2"><i class="fa-solid fa-cake-candles"></i>{{ legoset.ages }}+</span>
             </p>
-            <a href="" class="bg-orange text-black font-semibold rounded-md py-2 px-3" > <i class="fa-solid fa-bag-shopping mr-2"></i>Add to Bag</a>
+            <a href="{{ legoset.get_legoset }}" class="bg-orange text-black font-semibold rounded-md px-3 py-2" > <i class="fa-solid fa-bag-shopping mr-2"></i>View Legoset</a>
         </div>
         {% endfor %}
     </div>
