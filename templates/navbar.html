@@ -9,8 +9,9 @@
             {% if user.is_authenticated %}
             <a href="#" class="lg:text-black font-medium m-2 no-underline hover:underline">
                 <img src="/static/images/lego-head.png" class="xxs:h-5 xxs:w-5 lg:h-6 lg:w-6 inline-block mr-1 bg-white rounded-lg" alt="black lego head icon with rounded white background">
-                Welcome, (display username)
+                Welcome, {{request.user.username}}
             </a> 
+            <a href="{% url 'account_logout' %}" class="nav-link lg:text-black font-medium m-2 no-underline hover:underline">Logout</a>
             {% else %}
             <a href="#" class="lg:text-black font-medium m-2 no-underline hover:underline">
                 <img src="/static/images/lego-head.png" class="xxs:h-5 xxs:w-5 lg:h-6 lg:w-6 inline-block mr-1 bg-white rounded-lg" alt="black lego head icon with rounded white background">
