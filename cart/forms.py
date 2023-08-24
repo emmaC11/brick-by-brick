@@ -1,10 +1,11 @@
 from typing import Any, Dict
-from django.contrib.auth import get_user_model
+#from django.contrib.auth import get_user_model
+from django.contrib.auth.models import User
 from django import forms
 from cart.models import OrderItem, Address
 
 
-User = get_user_model()
+#User = get_user_model()
 
 
 class AddToCartForm(forms.ModelForm):
@@ -38,7 +39,11 @@ class AddressForm(forms.Form):
         user_id = kwargs.pop('user_id')
         super().__init__(*args, **kwargs)
 
-        user = User.objects.get(id=user_id)
+        try:
+            user = User.objects.get(id=user_id)
+        except:
+            User.DoesNotExist
+            user = None
 
         shipping_address_qs = Address.objects.filter(
             user=user,
