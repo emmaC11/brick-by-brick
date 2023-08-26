@@ -9,6 +9,7 @@
             {% if user.is_authenticated %}
             <a class="lg:text-black font-medium m-2 no-underline hover:underline">
                 Welcome, {{request.user.username}}
+                <img src="{% static 'images/lego-head.png' %}" alt="Lego Head" class="ml-2 inline-block h-8" />
             </a> 
             <a class="lg:text-black font-medium m-2 no-underline hover:underline"  href="{% url 'account_logout' %}">Logout</a>
             {% else %}
