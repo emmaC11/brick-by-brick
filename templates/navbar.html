@@ -4,7 +4,7 @@
     <div class="container mx-auto flex justify-between items-center">
         <div class="flex items-center mr-4">
             <div class=" flex items-center lego-logo ">
-            <img src="/static/images/lego-logo.png" alt="Logo" class="w-12 h-12 mr-10">
+            <img src="{% static 'images/lego-logo.png' %}" alt="Logo" class="w-12 h-12 mr-10">
         </div>
             <a href="{% url 'cart:product_list' %}" class=" lg:text-black font-medium m-2 no-underline hover:underline">SHOP</a>
             {% if user.is_authenticated %}
