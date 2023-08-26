@@ -9,7 +9,7 @@
             <a href="{% url 'cart:product_list' %}" class=" lg:text-black font-medium m-2 no-underline hover:underline">SHOP</a>
             {% if user.is_authenticated %}
             <a class="lg:text-black font-medium m-2 no-underline hover:underline">
-                Welcome, {{request.user.username}}
+                Account
                 <img src="{% static 'images/lego-head.png' %}" alt="Lego Head" class="ml-2 inline-block" width="40" />
             </a> 
             <a class="lg:text-black font-medium m-2 no-underline hover:underline"  href="{% url 'account_logout' %}">Logout</a>
