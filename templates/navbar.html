@@ -16,8 +16,11 @@
             </a>
             <!-- <a class="lg:text-black font-medium m-2 no-underline hover:underline"  href="{% url 'account_logout' %}">Logout</a> -->
             {% else %}
-              <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_login' %}">Login</a>
-              <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_signup' %}">Signup</a>
+              <!-- <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_login' %}">Login</a> -->
+              <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_login' %}">
+                <img src="{% static 'images/lego-head.png' %}" alt="Lego Head" class="ml-2 inline-block" width="40" />
+                Login
+            </a>
             {% endif %}
             <a href="{% url 'cart:cart_summary' %}" class="text-black hover:text-gray-900 ml-6 no-underline hover:no-underline">
                 <i class="fas fa-shopping-bag"></i>
