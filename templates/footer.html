@@ -1,8 +1,9 @@
+{% load static %}
 <footer class="text-white bg-deepPurple py-12">
     <div class="container mx-auto flex flex-col md:flex-row items-center justify-between">
         <!-- 25% parent container -->
         <div class="md:w-1/4 mb-6 md:mb-0">
-            <img src="/static/images/lego-logo.png" alt="Logo" class="w-20 h-20">
+            <img src="{% static 'images/lego-logo.png' %}" alt="Logo">
         </div>
         <div class="text-center md:w-1/4 mb-6 md:mb-0">
             <h4 class="text-lg font-semibold">Support</h4>
