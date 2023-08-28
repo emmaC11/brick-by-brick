@@ -6,6 +6,7 @@ urlpatterns = [
     # path('product_list/', views.product_list, name='product_list'),
     path('marketing/', views.MarketingFormView.as_view(), name='marketing'),
     path('cart/', include('cart.urls', namespace='cart')),
+    path('user_profile/', views.UserProfileView.as_view(), name='user_profile'),
 
 ]
 
