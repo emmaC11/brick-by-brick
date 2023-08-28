@@ -7,7 +7,10 @@ from django.views import generic
 from cart.models import LegoSet
 from .forms import MarketingForm
 
+
 # Create your views here.
+class UserProfileView(generic.TemplateView):
+    template_name = 'user_profile.html'
 
 
 class HomeView(generic.TemplateView):
