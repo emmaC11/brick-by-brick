@@ -4,13 +4,20 @@ from django.contrib import messages
 from django.shortcuts import render, reverse
 from django.views import generic
 #from django.shortcuts import reverse
-from cart.models import LegoSet
+from cart.models import LegoSet, Order
 from .forms import MarketingForm
 
 
 # Create your views here.
 class UserProfileView(generic.TemplateView):
     template_name = 'user_profile.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(UserProfileView, self).get_context_data(**kwargs)
+        context.update({
+            "orders": Order.objects.filter(user=self.request.user, ordered=True)
+        })
+        return context
 
 
 class HomeView(generic.TemplateView):
