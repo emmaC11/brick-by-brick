@@ -9,7 +9,7 @@ from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
 from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm
-from cart.models import LegoSet, OrderItem, Address, Payment
+from cart.models import LegoSet, OrderItem, Address, Payment, LegoSetTheme
 from .utils import get_or_set_order_session
 from django.urls import reverse
 
@@ -28,6 +28,12 @@ class ProductListView(generic.ListView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['lego_theme_filter_form'] = LegoThemeFilterForm()
+
+        # get selected theme's description and pass it to the context
+        selected_theme_id = self.request.GET.get('selected_theme')
+        if selected_theme_id:
+            selected_theme = LegoSetTheme.objects.get(pk=selected_theme_id)
+            context['selected_theme_description'] = selected_theme.theme_description
         return context
 
 
