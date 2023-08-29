@@ -19,7 +19,7 @@ class ProductListView(generic.ListView):
     queryset = LegoSet.objects.all()
 
     def get_queryset(self):
-        queryset = super(ProductListView).get_queryset()
+        queryset = super().get_queryset()
         theme_id = self.request.GET.get('selected_theme')
         if theme_id:
             queryset = queryset.filter(theme=theme_id)
