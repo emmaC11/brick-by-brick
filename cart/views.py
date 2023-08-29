@@ -34,6 +34,7 @@ class ProductListView(generic.ListView):
         if selected_theme_id:
             selected_theme = LegoSetTheme.objects.get(pk=selected_theme_id)
             context['selected_theme_description'] = selected_theme.theme_description
+            context['selected_theme_name'] = selected_theme.theme_name
         return context
 
 
