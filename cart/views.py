@@ -3,6 +3,7 @@ import json
 from django.conf import settings
 from django.contrib import messages
 from typing import Any, Dict
+from django.db.models.query import QuerySet
 from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404  
@@ -16,6 +17,13 @@ from django.urls import reverse
 class ProductListView(generic.ListView):
     template_name = 'cart/product_list.html'
     queryset = LegoSet.objects.all()
+
+    def get_queryset(self):
+        queryset = super(ProductListView).get_queryset()
+        theme_id = self.request.GET.get('selected_theme')
+        if theme_id:
+            queryset = queryset.filter(theme=theme_id)
+        return queryset
 
 
 class LegoSetDetailView(generic.FormView):
