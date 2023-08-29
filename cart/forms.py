@@ -2,11 +2,12 @@ from typing import Any, Dict
 #from django.contrib.auth import get_user_model
 from django.contrib.auth.models import User
 from django import forms
-from cart.models import OrderItem, Address
+from cart.models import OrderItem, Address, LegoSetTheme
 
 
 #User = get_user_model()
 
+class LegoThemeFilterForm(forms.Form):
 
 class AddToCartForm(forms.ModelForm):
 
