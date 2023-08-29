@@ -8,6 +8,7 @@ from cart.models import OrderItem, Address, LegoSetTheme
 #User = get_user_model()
 
 class LegoThemeFilterForm(forms.Form):
+    theme_chocies = [theme.id, theme.theme_name for theme in LegoSetTheme.objects.all()]
 
 class AddToCartForm(forms.ModelForm):
 
