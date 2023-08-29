@@ -11,9 +11,11 @@
         <a href="{% url 'cart:product_list' %}" class="bg-gray-300 text-gray-700 py-2 px-4 rounded ml-4">Clear Filter</a>
         
     </div>
-    {% if selected_theme_description %}
-    <h2 class="text-2xl font-semibold mb-4">{{ selected_theme_description }}</h2>
-    {% endif %}
+    <div class="theme-description bg-gray-200 p-4 rounded-md text-sm mb-4">
+        {% if selected_theme_description %}
+            {{ selected_theme_description }}
+        {% endif %}
+    </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {% for legoset in object_list %}
         <div class="bg-white p-6 shadow-md rounded-lg w-full h-full border border-gray-300">
