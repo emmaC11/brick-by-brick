@@ -1024,6 +1024,11 @@ select {
   background-color: rgb(32 29 72 / var(--tw-bg-opacity));
 }
 
+.bg-gray-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .bg-gray-50 {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
@@ -1106,6 +1111,10 @@ select {
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pr-4 {
+  padding-right: 1rem;
 }
 
 .text-left {

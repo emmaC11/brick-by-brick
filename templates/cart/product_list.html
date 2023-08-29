@@ -5,7 +5,7 @@
 <div class="container mx-auto py-8">
     <div class="set-filtering mb-4">
         <form method="get" class="inline-block">
-            {{ lego_theme_filter_form | crispy }}
+            {{ lego_theme_filter_form }}
             <button type="submit" class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Apply Filter</button>
         </form>
         <a href="{% url 'cart:product_list' %}" class="bg-gray-300 text-gray-700 py-2 px-4 rounded ml-4">Clear Filter</a>
