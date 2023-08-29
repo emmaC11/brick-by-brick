@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404  
 from django.views import generic
-from .forms import AddToCartForm, AddressForm
+from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm
 from cart.models import LegoSet, OrderItem, Address, Payment
 from .utils import get_or_set_order_session
 from django.urls import reverse
@@ -24,6 +24,11 @@ class ProductListView(generic.ListView):
         if theme_id:
             queryset = queryset.filter(theme=theme_id)
         return queryset
+   
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['lego_theme_filter_form'] = LegoThemeFilterForm()
+        return context
 
 
 class LegoSetDetailView(generic.FormView):
