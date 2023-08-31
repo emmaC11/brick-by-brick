@@ -40,8 +40,8 @@ class MarketingFormView(generic.FormView):
         send_mail(
             subject="New marketing email subscriber!",
             message=form_data,
-            from_email=settings.DEFAULT_FROM_EMAIL,
-            recipient_list=[settings.NOTIFY_EMAIL]
+           # from_email=settings.EMAIL_HOST_USER,
+            # recipient_list=[settings.NOTIFY_EMAIL]
         )
         return super(MarketingFormView, self).form_valid(form)
     
