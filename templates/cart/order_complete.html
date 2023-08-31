@@ -1,4 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-<p>this is order_complete.html</p>
+<div class="order-complete-container pt-20 mx-20 ">
+    <div class="mb-5">
+        <div class="border p-4 rounded text-center">
+            Your order has been processed successfully!
+            Please refer to your <a href="{% url 'user_profile' %}">profile</a> to review order history
+        </div>
+    </div>
+</div>
 {% endblock content %}
