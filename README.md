@@ -44,6 +44,27 @@ Admin users have permissions to add new products to the brick by brick catalogue
 > As an admin user, I want the ability to delete products that are no longer available or relevant from the website.
 > As an admin user, I want to add new brick by brick themes to associate products with.
 
+# Design
+The design of the brick by brick takes its inspiration from the official [Lego Website](https://www.lego.com/en-ie). Using a minimalistic design approach, the design combines simplicity with functionality. The design aims to mirror the LEGO brand's identity. With a cohesive color scheme and user-friendly layout, the website ensures seamless navigation, inviting users to explore products.
+
+## Colour Scheme
+The website uses a primary colour palette. The primary colours used throughout the website are yellow (#ffcf00), orange (#FD8024), deep purple (#201D48F) & blue. The site uses the same primary colours throughout to keep design consistent and clean.
+
+## Wireframes
+I decided to take a different approach to wireframes for this project as my aim was to follow a design that already exists & was designed by professionals. I took screenshots of each page I wanted to include & using the draw functionality on my computer, I marked the sections I wanted to include in my project & used these as a reference. I found this approach really helpful as I could reference images over a simple diagram. These were created before dev started so production site design may vary slightly to wireframes. (please excuse the awful drawing &writing....)
+# add wireframe images
+
+## Database Model
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/0a7d847d-a215-4a6a-918e-558ce1b568eb)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/c7fee2fb-419f-4d18-b274-11e6edf65be2)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/8bb3cc6b-8265-428a-8c32-4f21ee63a4d0)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/68255629-f175-453a-bef3-877af23bc19e)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/d185188a-2198-40b1-a130-26f4708f9296)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/84aad907-8ede-4d27-acac-ba36ba741073)
+
+
+
+
 
 
 
