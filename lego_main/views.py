@@ -6,7 +6,6 @@ from django.views import generic
 from cart.models import LegoSet, Order
 
 
-# Create your views here.
 class UserProfileView(generic.TemplateView):
     template_name = 'user_profile.html'
 
