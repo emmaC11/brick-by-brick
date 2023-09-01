@@ -1,6 +1,5 @@
 from django.urls import path
 from cart import views
-from django.views.defaults import page_not_found
 
 app_name = 'cart'
 
