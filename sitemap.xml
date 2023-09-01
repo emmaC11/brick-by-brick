@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/marketing/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/millennium-falcon/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/boba-microfighter/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/dagoba/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/r2d2/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/cantina/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/throne-room-diorama/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/trash-compactor/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/starfighter-microfighter/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/vespa/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/jazz/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/formula-1/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/cody-helment/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/moon-landing/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/cart/shop/globe/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://brick-by-brickk-8a85ca9be3ac.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-09-01T19:06:07+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
