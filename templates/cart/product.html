@@ -2,73 +2,81 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
- <!-- Product info & image -->
- <div class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
-    <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
-      <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mx-auto max-w-full">
-
-      <div class="product-info text-center mt-10">
-        <h4 class="text-black">
-            <span><i class="fa-solid fa-cake-candles text-gray-500"></i> {{ legoset.ages }}+</span>
-            <span class="ml-4"><i class="fa-solid fa-puzzle-piece text-gray-500"></i> {{ legoset.piece_count }} pieces</span>
-            <span class="ml-4"><i class="fa-solid fa-person-walking text-gray-500"></i> {{ legoset.minifigures }} minifigures</span>
-            <span class="ml-4"><i class="fa-solid fa-hashtag text-gray-500"></i> Item Number: {{ legoset.item_number }}</span>
-        </h4>
+<!-- Product info & image -->
+<div
+  class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
+  <div class="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
+    <img src="{{ legoset.image.url }}" alt="{{ legoset.name }}" class="mx-auto max-w-full">
+    <div class="product-info text-center mt-10">
+      <h4 class="text-black">
+        <span><i class="fa-solid fa-cake-candles text-gray-500"></i> {{ legoset.ages }}+</span>
+        <span class="ml-4"><i class="fa-solid fa-puzzle-piece text-gray-500"></i> {{ legoset.piece_count }}
+          pieces</span>
+        <span class="ml-4"><i class="fa-solid fa-person-walking text-gray-500"></i> {{ legoset.minifigures }}
+          minifigures</span>
+        <span class="ml-4"><i class="fa-solid fa-hashtag text-gray-500"></i> Item Number:
+          {{ legoset.item_number }}</span>
+      </h4>
     </div>
-
-  
   </div>
-
   <!-- Info on right side of container -->
   <div class="mt-4 lg:row-span-3 lg:mt-0">
     <h4 class="lego-product-title">{{ legoset.name }}</h4>
-
     <!-- below star feature is from product overview component - https://tailwindui.com/components/ecommerce/components/product-overviews -->
     <div class="mt-6">
       <h3 class="sr-only">Reviews</h3>
-        <div class="flex items-center">
-          <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-          </svg>
-          <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-          </svg>
-          <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-          </svg>
-          <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-          </svg>
-          <svg class="text-gray-200 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z" clip-rule="evenodd" />
-          </svg>
-        </div>
+      <div class="flex items-center">
+        <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+            clip-rule="evenodd" />
+        </svg>
+        <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+            clip-rule="evenodd" />
+        </svg>
+        <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+            clip-rule="evenodd" />
+        </svg>
+        <svg class="text-yellow-500 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+            clip-rule="evenodd" />
+        </svg>
+        <svg class="text-gray-200 h-5 w-5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd"
+            d="M10.868 2.884c-.321-.772-1.415-.772-1.736 0l-1.83 4.401-4.753.381c-.833.067-1.171 1.107-.536 1.651l3.62 3.102-1.106 4.637c-.194.813.691 1.456 1.405 1.02L10 15.591l4.069 2.485c.713.436 1.598-.207 1.404-1.02l-1.106-4.637 3.62-3.102c.635-.544.297-1.584-.536-1.65l-4.752-.382-1.831-4.401z"
+            clip-rule="evenodd" />
+        </svg>
+      </div>
     </div>
-
     <div class="buy-info mt-3">
       <h4 class="font-semibold">€{{ legoset.get_legoset_price}}</h4>
       <p class="text-green-600 font-semibold">Available now</p>
-
       <div class="flex flex-col items-left mt-5">
         <a href="https://www.lego.com/en-ie/page/shipping-handling" target="_blank" class="flex items-center space-x-2">
-            <i class="fas fa-truck text-black"></i>
-            <span class="text-black">Deliveries & Returns</span>
-            <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
+          <i class="fas fa-truck text-black"></i>
+          <span class="text-black">Deliveries & Returns</span>
+          <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
         </a>
         <hr class="border-t border-gray-300 my-2">
-        <a href="https://www.lego.com/en-us/service/buildinginstructions/75360?marketfallbackfrom=en-ie" target="_blank" class="flex items-center space-x-2">
-            <i class="fas fa-book-open text-black"></i>
-            <span class="text-black">Building Instructions</span>
-            <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
+        <a href="https://www.lego.com/en-us/service/buildinginstructions/75360?marketfallbackfrom=en-ie" target="_blank"
+          class="flex items-center space-x-2">
+          <i class="fas fa-book-open text-black"></i>
+          <span class="text-black">Building Instructions</span>
+          <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
         </a>
+      </div>
+      <form method="POST">
+        {% csrf_token %}
+        {{ form|crispy }}
+        <button type="submit"
+          class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange px-8 py-3 text-base font-medium text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add
+          to bag</button>
+      </form>
     </div>
-    <form method="POST">
-      {% csrf_token %}
-      {{ form|crispy }}
-      <button type="submit" class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange px-8 py-3 text-base font-medium text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add to bag</button>
-    </form>
   </div>
-</div>
-
-
-{% endblock %}
+  {% endblock %}

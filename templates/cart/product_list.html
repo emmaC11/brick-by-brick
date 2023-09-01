@@ -6,19 +6,28 @@
     <div class="set-filtering mb-4">
         <form method="get" class="inline-block">
             {{ lego_theme_filter_form }}
-            <button type="submit" class="ml-2 bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Apply Filter</button>
+            <button type="submit"
+                class="ml-2 bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Apply
+                Filter</button>
         </form>
-        <a href="{% url 'cart:product_list' %}" class="bg-gray-300 text-gray-700 py-2 px-4 rounded ml-4">Clear Filter</a>
-        
+        <a href="{% url 'cart:product_list' %}" class="bg-gray-300 text-gray-700 py-2 px-4 rounded ml-4">Clear
+            Filter</a>
     </div>
     <div class="theme-description bg-gray-200 p-4 rounded-md text-sm mb-4">
         {% if selected_theme_name %}
         <h5 class="font-semibold mb-2">{{ selected_theme_name }}</h5>
         {% endif %}
         {% if selected_theme_description %}
-            {{ selected_theme_description }}
-            {% else %}
-            <p>Welcome to a mock site of the Lego Shop, the amazing home of LEGO building toys, gifts, stunning display sets and much more for kids and adults alike! <br/><strong>Disclaimer:</strong>  This website is a mock project for college created for educational purposes only. The products displayed on this website are not for sale and are used for illustrative purposes. No products are sold here. This project is not affiliated with or endorsed by the LEGO Group or any other entity. All LEGO® related trademarks, copyrights, and other intellectual property rights are the property of the LEGO Group. Any references to LEGO® products, themes, or characters are used purely for educational and non-commercial purposes. All rights to the LEGO Group and its intellectual property are acknowledged and respected.</p> 
+        {{ selected_theme_description }}
+        {% else %}
+        <p>Welcome to a mock site of the Lego Shop, the amazing home of LEGO building toys, gifts, stunning display sets
+            and much more for kids and adults alike! <br /><strong>Disclaimer:</strong> This website is a mock project
+            for college created for educational purposes only. The products displayed on this website are not for sale
+            and are used for illustrative purposes. No products are sold here. This project is not affiliated with or
+            endorsed by the LEGO Group or any other entity. All LEGO® related trademarks, copyrights, and other
+            intellectual property rights are the property of the LEGO Group. Any references to LEGO® products, themes,
+            or characters are used purely for educational and non-commercial purposes. All rights to the LEGO Group and
+            its intellectual property are acknowledged and respected.</p>
         {% endif %}
     </div>
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
@@ -30,12 +39,11 @@
                 <span class="price">€{{ legoset.get_legoset_price  }}</span>
                 <span class="age ml-2"><i class="fa-solid fa-cake-candles"></i>{{ legoset.ages }}+</span>
             </p>
-            <a href="{{ legoset.get_legoset }}" class="bg-orange text-black font-semibold rounded-md px-3 py-2 no-underline hover:no-underline" > <i class="fa-solid fa-bag-shopping mr-2"></i>View Legoset</a>
+            <a href="{{ legoset.get_legoset }}"
+                class="bg-orange text-black font-semibold rounded-md px-3 py-2 no-underline hover:no-underline"> <i
+                    class="fa-solid fa-bag-shopping mr-2"></i>View Legoset</a>
         </div>
         {% endfor %}
     </div>
 </div>
-
-
-
 {% endblock %}

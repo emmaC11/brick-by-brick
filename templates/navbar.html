@@ -4,27 +4,29 @@
     <div class="container mx-auto flex justify-between items-center">
         <div class="flex items-center mr-4">
             <div class=" flex items-center lego-logo ">
-            <a href="{% url 'home' %}" class="lg:text-black font-medium m-2 no-underline hover:underline">
-            <img src="{% static 'images/lego-logo.png' %}" alt="cartoon lego logo image" class="w-12 h-12 mr-10">
-            </a>
-        </div>
-            <a href="{% url 'cart:product_list' %}" class=" lg:text-black font-medium m-2 no-underline hover:underline">SHOP</a>
-           
+                <a href="{% url 'home' %}" class="lg:text-black font-medium m-2 no-underline hover:underline">
+                    <img src="{% static 'images/lego-logo.png' %}" alt="cartoon lego logo image"
+                        class="w-12 h-12 mr-10">
+                </a>
+            </div>
+            <a href="{% url 'cart:product_list' %}"
+                class=" lg:text-black font-medium m-2 no-underline hover:underline">SHOP</a>
         </div>
         <div class="cart-login flex items-center">
             {% if user.is_authenticated %}
             <a href="{% url 'user_profile' %}" class="lg:text-black font-medium m-2 no-underline hover:underline">
-                <img src="{% static 'images/lego-head.png' %}" alt="Lego Head Minifigure Cartoon" class="ml-2 inline-block" width="40">
+                <img src="{% static 'images/lego-head.png' %}" alt="Lego Head Minifigure Cartoon"
+                    class="ml-2 inline-block" width="40">
             </a>
-            <!-- <a class="lg:text-black font-medium m-2 no-underline hover:underline"  href="{% url 'account_logout' %}">Logout</a> -->
             {% else %}
-              <!-- <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_login' %}">Login</a> -->
-              <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_login' %}">
-                <img src="{% static 'images/lego-head.png' %}" alt="Lego Head Minifigure Cartoon" class="ml-2 inline-block" width="40">
+            <a class="lg:text-black font-medium m-2 no-underline hover:underline" href="{% url 'account_login' %}">
+                <img src="{% static 'images/lego-head.png' %}" alt="Lego Head Minifigure Cartoon"
+                    class="ml-2 inline-block" width="40">
                 Login
             </a>
             {% endif %}
-            <a href="{% url 'cart:cart_summary' %}" class="text-black hover:text-gray-900 ml-6 no-underline hover:no-underline">
+            <a href="{% url 'cart:cart_summary' %}"
+                class="text-black hover:text-gray-900 ml-6 no-underline hover:no-underline">
                 <i class="fas fa-shopping-bag"></i>
                 <span class="count text-black">{{request|cart_item_count}}</span>
             </a>

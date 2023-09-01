@@ -6,30 +6,29 @@
     <p>Order total: €{{ order.get_order_total }}</p>
 </div>
 <div class="flex justify-center">
-<div id="paypal-button-container"></div>
+    <div id="paypal-button-container"></div>
 </div>
 {% endblock content %}
 
 {% block scripts %}
 <script src="https://www.paypal.com/sdk/js?client-id={{ PAYPAL_CLIENT_ID }}"></script>
 <script>
-
     function getCookie(name) {
-            var cookieValue = null;
-            if (document.cookie && document.cookie !== '') {
-                var cookies = document.cookie.split(';');
-                for (var i = 0; i < cookies.length; i++) {
-                    var cookie = cookies[i].trim();
-                    // Does this cookie string begin with the name we want?
-                    if (cookie.substring(0, name.length + 1) === (name + '=')) {
-                        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
-                        break;
-                    }
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                // Does this cookie string begin with the name we want?
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
                 }
             }
-            return cookieValue;
         }
-        var csrftoken = getCookie('csrftoken');
+        return cookieValue;
+    }
+    var csrftoken = getCookie('csrftoken');
 
     function sendOrderConfirmed(details) {
         return fetch("{% url 'cart:order_confirmed' %}", {
@@ -59,13 +58,13 @@
                 console.log(details);
                 sendOrderConfirmed(details).then(res => {
                     setTimeout(function () {
-                    window.location.href = "{% url 'cart:order_complete' %}";
+                        window.location.href = "{% url 'cart:order_complete' %}";
                     }, 2000);
                 });
-            
-          
+
+
             });
         }
     }).render('#paypal-button-container');
-  </script>
+</script>
 {% endblock scripts %}

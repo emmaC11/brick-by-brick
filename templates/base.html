@@ -8,7 +8,8 @@
 <head>
   <title>Brick By Brick</title>
   <meta name="description" content="Clone of the lego website named Brick by Brick that sells buildable lego sets">
-  <meta name="keywords" content="lego, lego clone, lego sets, europe, build, children toys, online store, lego products">
+  <meta name="keywords"
+    content="lego, lego clone, lego sets, europe, build, children toys, online store, lego products">
   <link rel="icon" type="image/png" href="{% static 'images/favicon.png' %}">
   {% tailwind_css %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,19 +22,20 @@
   </script>
   <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
+
 <body class="flex flex-col min-h-screen">
   {% include 'navbar.html' %}
 
   <main class="flex-1">
-  {% block content %}
-  {% endblock %}
-</main>
+    {% block content %}
+    {% endblock %}
+  </main>
 
   {% include 'footer.html' %}
   <script src="https://kit.fontawesome.com/c05c29f2a2.js" crossorigin="anonymous"></script>
 
-{% block scripts %}
-{% endblock scripts %}
+  {% block scripts %}
+  {% endblock scripts %}
 </body>
-</html>
 
+</html>

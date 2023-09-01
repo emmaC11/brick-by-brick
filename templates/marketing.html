@@ -12,12 +12,11 @@
                 <form method="POST">
                     {% csrf_token %}
                     {{ form | crispy }}
-                    <input type="submit" class="bg-orange text-black font-semibold rounded-md py-2 px-3 mt-6" value="Submit message" />
+                    <input type="submit" class="bg-orange text-black font-semibold rounded-md py-2 px-3 mt-6"
+                        value="Submit message" />
                 </form>
             </div>
         </div>
     </div>
 </div>
-
-
 {% endblock %}
