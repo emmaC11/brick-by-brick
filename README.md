@@ -170,6 +170,10 @@ U* pon successful payment, the payment details are sent to the server for confir
 If the user has not placed any orders, a message is displayed indicating that there are no orders in their history.
 ![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/dcea8957-ffe7-4915-9196-a852b851d1e7)
 
+## Admin Panel
+The admin super user can add & delete products to the catalogue within on the catalogue. They can also add different themes that can be used to filter products. Order staus can be viewed, users billing & shipping addresses.
+
+
 
 
 
