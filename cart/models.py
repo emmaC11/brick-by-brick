@@ -15,7 +15,6 @@ class Address(models.Model):
     address_line_2 = models.CharField(max_length=200)
     city = models.CharField(max_length=200)
     postal_code = models.CharField(max_length=200)
-    # country = models.CharField(max_length=200)
     address_type = models.CharField(max_length=1, choices=ADDRESS_CHOICES)
 
     def __str__(self):

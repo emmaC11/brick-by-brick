@@ -43,7 +43,6 @@ class ProductListView(generic.ListView):
 class LegoSetDetailView(generic.FormView):
     template_name = 'cart/product.html'
     form_class = AddToCartForm
-    # queryset = LegoSet.objects.all()
 
     def get_object(self):
         return get_object_or_404(LegoSet, slug=self.kwargs["slug"])
