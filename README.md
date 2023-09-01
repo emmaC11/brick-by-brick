@@ -173,6 +173,22 @@ If the user has not placed any orders, a message is displayed indicating that th
 ## Admin Panel
 The admin super user can add & delete products to the catalogue within on the catalogue. They can also add different themes that can be used to filter products. Order staus can be viewed, users billing & shipping addresses.
 
+# **Testing**
+## Validator Testing
+* To verify that the HTML code was written to the best standard, I conducted validator testing with the W3C Markup Validator. I fixed the errors and warnings and currently there are no errors or warnings in the HTML code.
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/bd567c82-4ff4-4199-89b7-2055c0374a8f)
+
+* CSS styling was validated using the W3C CSS Validation Service to ensure the code was written to the expected standard. No errors were found when passing the code through the W3C CSS validator.
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/10c56d43-9114-46f7-8340-49031808409b)
+
+I have used the PEP8 Linter to validate my code. It is activated within my code editor (Visual Studio Code). I had lots of 'lines too long' & 'whitespace' errors. I split lines where applicable, but I had to use #noqa (meaning line(s) is ignored by linters & validators) in settings.py as these lines could not be split without causing errors. I installed a [VS Extension](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces#:~:text=At%20any%20time%2C%20you%20can,type%20%22Trailing%20Spaces%3A%20Highlight%22) that highlights whitespace within the code. Throughout development I have been making tweaks to my code to ensure there are no errors. There are now no errros in my code. View the PEP8 documentation [here](https://peps.python.org/pep-0008/)
+
+## Event Listener Testing
+Event listener testing focuses on verifying the functionality and responsiveness of event listeners within a web application.
+* All button clicks trigger an event on the site.
+
+## add manual tests
+
 
 
 
