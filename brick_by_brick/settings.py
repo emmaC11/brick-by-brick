@@ -32,10 +32,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # DEV
-# DEBUG = True
+DEBUG = True
 
 # PROD
-DEBUG = False
+# DEBUG = False
 
 ALLOWED_HOSTS = [
     'brick-by-brickk.herokuapp.com',
