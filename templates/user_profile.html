@@ -13,15 +13,13 @@
                         <h5 class="text-xl font-semibold">Your Orders</h5>
                         <div class="mt-4">
                             <table class="w-full">
-                                <thead>
+                                <tbody>
                                     <tr>
                                         <th class="text-left">Reference No.</th>
                                         <th class="text-left">Date</th>
                                         <th class="text-left">Amount</th>
                                         <th class="text-left">Payment Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
+                                    </tr>    
                                     {% for order in orders %}
                                     <tr>
                                         <td class="py-2">#{{ order.reference_number }}</td>
