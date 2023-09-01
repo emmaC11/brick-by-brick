@@ -3,7 +3,6 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from django.shortcuts import render, reverse
 from django.views import generic
-#from django.shortcuts import reverse
 from cart.models import LegoSet, Order
 from .forms import MarketingForm
 
@@ -15,7 +14,9 @@ class UserProfileView(generic.TemplateView):
     def get_context_data(self, **kwargs):
         context = super(UserProfileView, self).get_context_data(**kwargs)
         context.update({
-            "orders": Order.objects.filter(user=self.request.user, ordered=True)
+            "orders": Order.objects.filter(
+                user=self.request.user, ordered=True
+                )
         })
         return context
 
@@ -30,26 +31,19 @@ class MarketingFormView(generic.FormView):
 
     def get_success_url(self):
         return reverse("marketing")
-    
+
     def form_valid(self, form):
         messages.info(self.request, "You are now subscribed!")
         email = form.cleaned_data.get("email")
 
-        form_data = "Add user to marketing email list: {email}".format(email=email)
+        form_data = "Add user to marketing email list: {email}".format(
+            email=email
+            )
 
         send_mail(
             subject="New marketing email subscriber!",
             message=form_data,
-           # from_email=settings.EMAIL_HOST_USER,
+            # from_email=settings.EMAIL_HOST_USER,
             # recipient_list=[settings.NOTIFY_EMAIL]
         )
         return super(MarketingFormView, self).form_valid(form)
-    
-        
-
-
-# def product_list(request):
-#     context = {
-#         'lego_sets': LegoSet.objects.all(),
-#     }
-#     return render(request, 'product_list.html')

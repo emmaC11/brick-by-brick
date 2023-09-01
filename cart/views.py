@@ -6,7 +6,7 @@ from typing import Any, Dict
 from django.db.models.query import QuerySet
 from django.http import HttpResponse
 from django.http import JsonResponse
-from django.shortcuts import redirect, render, get_object_or_404  
+from django.shortcuts import redirect, render, get_object_or_404
 from django.views import generic
 from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm
 from cart.models import LegoSet, OrderItem, Address, Payment, LegoSetTheme
@@ -24,7 +24,7 @@ class ProductListView(generic.ListView):
         if theme_id:
             queryset = queryset.filter(theme=theme_id)
         return queryset
-   
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['lego_theme_filter_form'] = LegoThemeFilterForm()
@@ -33,7 +33,9 @@ class ProductListView(generic.ListView):
         selected_theme_id = self.request.GET.get('selected_theme')
         if selected_theme_id:
             selected_theme = LegoSetTheme.objects.get(pk=selected_theme_id)
-            context['selected_theme_description'] = selected_theme.theme_description
+            context['selected_theme_description'] = (
+                selected_theme.theme_description
+            )
             context['selected_theme_name'] = selected_theme.theme_name
         return context
 
@@ -45,10 +47,10 @@ class LegoSetDetailView(generic.FormView):
 
     def get_object(self):
         return get_object_or_404(LegoSet, slug=self.kwargs["slug"])
-    
+
     def get_success_url(self):
         return reverse("cart:cart_summary")
-    
+
     def form_valid(self, form):
         order = get_or_set_order_session(self.request)
         legoset = self.get_object()
@@ -73,18 +75,18 @@ class LegoSetDetailView(generic.FormView):
         context = super(LegoSetDetailView, self).get_context_data(**kwargs)
         context['legoset'] = self.get_object()
         return context
-    
-    
+
+
 # want to see items in our cart
 class CartView(generic.TemplateView):
     template_name = 'cart/cart.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super(CartView, self).get_context_data(**kwargs)
         context["order"] = get_or_set_order_session(self.request)
         return context
-        
-    
+
+
 class IncrementLegoSetQuantityView(generic.View):
     def get(self, request, *args, **kwargs):
         # increment LegoSet quantity & redirect to the cart
@@ -123,12 +125,17 @@ class CheckoutView(generic.FormView):
     def get_success_url(self):
         return reverse("cart:payment")
 
-    def form_valid(self,form):
+    def form_valid(self, form):
         order = get_or_set_order_session(self.request)
-        selected_shipping_address = form.cleaned_data.get('selected_shipping_address')
-        selected_billing_address = form.cleaned_data.get('selected_shipping_address')
+        selected_shipping_address = form.cleaned_data.get(
+            'selected_shipping_address'
+            )
+        selected_billing_address = form.cleaned_data.get(
+            'selected_shipping_address'
+            )
 
-        # use address from dropdown if selected or create new address using Address model
+        # use address from dropdown if selected
+        # or create new address using Address model
         if selected_shipping_address:
             order.shipping_address = selected_shipping_address
         else:
@@ -141,7 +148,6 @@ class CheckoutView(generic.FormView):
                 postal_code=form.cleaned_data['shipping_postal_code'],
             )
             order.shipping_address = address
-      
 
         if selected_billing_address:
             order.billing_address = selected_billing_address
