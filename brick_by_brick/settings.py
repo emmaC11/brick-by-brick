@@ -32,10 +32,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # DEV
-DEBUG = True
+# DEBUG = True
 
 # PROD
-# DEBUG = False
+DEBUG = False
 
 ALLOWED_HOSTS = [
     'brick-by-brickk.herokuapp.com',
@@ -188,8 +188,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
-PAYPAL_CLIENT_ID = os.environ.get("PAYPAL_SANDBOX_CLIENT_ID")
-PAYPAL_SECREY_KEY = os.environ.get("PAYPAL_SANDBOX_SECRET_KEY")
+PAYPAL_CLIENT_ID = os.environ.get("PAYPAL_CLIENT_ID")
+PAYPAL_SECREY_KEY = os.environ.get("PAYPAL_SECRET_KEY")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
