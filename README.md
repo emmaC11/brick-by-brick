@@ -243,6 +243,17 @@ The primary purpose of brick by brick is to provide an online platform for users
 
 
 
+# **Development Environment**
+## Dev Structure
+* The first step for this PP5 project was to come up with the project idea, I personally love the style of the lego website & I have a lego collection myself. I wanted to challenge myself to create a mock based on the live site. 
+* I then moved on to creating some wireframes. I have learned from previous projects that having a good plan before writing any lines of code is critical. I worked on the django walkthrough project & referenced that heavily in the early stages during project setup. I also referenced a course from [justdjango](https://justdjango.com/courses/django-ecommerce) which was a massive help throughout this project.
+* I created my user stories within my onenote & some on GitHub issues.
+* I kept a onenote notebook to log all notes from CI content, links etc associated with PP5. This help me keep track of what resources I used, masterclass notes & bugs tracked throughout the development cycle.
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/3b005012-2228-4e2d-802d-eb2baf6f70b7)
+
+
+
+
 
 
 
