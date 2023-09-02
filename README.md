@@ -183,11 +183,26 @@ The admin super user can add & delete products to the catalogue within on the ca
 
 I have used the PEP8 Linter to validate my code. It is activated within my code editor (Visual Studio Code). I had lots of 'lines too long' & 'whitespace' errors. I split lines where applicable, but I had to use #noqa (meaning line(s) is ignored by linters & validators) in settings.py as these lines could not be split without causing errors. I installed a [VS Extension](https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces#:~:text=At%20any%20time%2C%20you%20can,type%20%22Trailing%20Spaces%3A%20Highlight%22) that highlights whitespace within the code. Throughout development I have been making tweaks to my code to ensure there are no errors. There are now no errros in my code. View the PEP8 documentation [here](https://peps.python.org/pep-0008/)
 
+
+
+## add manual tests
+
 ## Event Listener Testing
 Event listener testing focuses on verifying the functionality and responsiveness of event listeners within a web application.
 * All button clicks trigger an event on the site.
 
-## add manual tests
+## Responsive Testing
+* The website was tested on several devices and screen sizes to ensure it was responsvie regardless of the screen size. It has been tested on desktop, Ipad Mini, Ipad Air, Iphone 5, Samsung Galaxy S8+, Iphone X, Iphone SE. Mobile devices have been tested in portrait and landscape mode. The site has been tested in Chrome, Edge, FireFox & Brave browsers.
+
+## Lighthouse Testing
+* The Lighthouse tool in Chrome DevTools is used to test a websites performance & accessibility. It is an open-source automated tool used to improve the quality of webpages.
+When I tested my website, an audit report was returned indicating that my website has high performance and is accessible. However my accessibility rating is low, due to the white text on my hero image. This is something that will be addressed in next sprint.
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/315c81fb-aec0-4cd1-aa79-6b2ecf953e27)
+
+## User Testing
+The site has been tested regularly during development. After the site was completed I reached out to some fellow students & asks them to test the site & provide feedback.
+
+
 
 
 
