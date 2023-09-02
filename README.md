@@ -202,6 +202,28 @@ When I tested my website, an audit report was returned indicating that my websit
 ## User Testing
 The site has been tested regularly during development. After the site was completed I reached out to some fellow students & asks them to test the site & provide feedback.
 
+## Bugs Identified During Development & Testing
+* Site would not run locally as I did not have gitpod server in allowed_hosts.
+* Heroku deployment was failing as I did add the disable_collectstatic config var
+* Missing endblock tags in html template, fixed by adding {%endblock%} tag at end of HTML code.
+* Content from base.html was not displaying in index.html as I did not add block content tags to base.html
+* Images were not loading as I was not using load static template tag, I used images locally as a temporary fix until I identified the issue.
+* Several times I forgot to close loops & if statements, best practise was going line by line to ensure the conditional or loop was closed when required,
+* Some of my commit messages have spelling errors, however this is due to an issue with the bash terminal. I type the commit message correctly however it is changed after I confirm the commit.
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/a41f9e86-5a3b-4d27-94a5-99dfcc3cd5be)
+* Some of my commit messages are way to vague, several commits have comments as I only realise after I complete a git push that several files & lines have been edited. I noticed that as I reached my project deadline my commit messages were becoming shorter & shorter.
+* Tailwind css file constantly adding changes automatically, that is why these changes are mentioned in commits.
+* Brick-by-brick project name not available in heroku, used brick-by-brickk
+* When adding tailwind originally, I followed setup without django, did steps again with django doc and worked as expected, would have been easier if I set up when first starting project.
+* Stored tailwind files in lego_main app while tailwind needs to be in separate theme app
+* Content not displaying as I was missing block content tags after navigation bar
+* Forgot to add .asView at end of views in urls.py causing the path to not work as expected.
+* Reverting commits caused me to be behind in main branch.
+* Template not rendering as product defined as legoSet in view not legoset, which was in template,
+Legoorderitems not items in related name
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/ff36849e-2985-4d3c-90ec-1c426165bb24)
+* PAYPAL scripts not rendering as I did not load script tags in base.html
+
 
 
 
