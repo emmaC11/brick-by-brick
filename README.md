@@ -224,6 +224,24 @@ Legoorderitems not items in related name
 ![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/ff36849e-2985-4d3c-90ec-1c426165bb24)
 * PAYPAL scripts not rendering as I did not load script tags in base.html
 
+# Business Model
+The primary purpose of brick by brick is to provide an online platform for users to browse, select, and purchase LEGO products. The business model is primarily B2C (Business to Consumer), targeting individual consumers who are LEGO enthusiasts and shoppers interested in LEGO sets and products.
+
+* Product Sales: The core intent of the application is to facilitate the sale of LEGO products. Users can browse a wide range of LEGO sets, choose the ones they desire, and make purchases online.
+
+* User Engagement: To keep users engaged, the application offers features like user accounts & profile view to track their order history.
+
+* Payment Processing: The application integrates with PayPal to securely process online payments for the products users wish to purchase.
+
+* Product Management: The admin functionality allows for the addition of new LEGO products, management of product availability, and pricing updates.
+
+## Marketing Strategies
+* Search Engine Optimization (SEO): Optimizing the website for search engines with relevant keywords, meta tags, and high-quality content to improve organic search rankings and visibility. The site uses a variety of long tail and short tail keywords
+
+* Mock Facebook page
+![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/f76f8d0d-7d91-4894-84e4-ba669f74b72b)
+
+
 
 
 
