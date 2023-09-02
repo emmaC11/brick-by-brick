@@ -273,7 +273,9 @@ The primary purpose of brick by brick is to provide an online platform for users
 * Product Management: The admin functionality allows for the addition of new LEGO products, management of product availability, and pricing updates.
 
 ## Marketing Strategies
-* Search Engine Optimization (SEO): Optimizing the website for search engines with relevant keywords, meta tags, and high-quality content to improve organic search rankings and visibility. The site uses a variety of long tail and short tail keywords
+* Search Engine Optimization (SEO): Optimizing the website for search engines with relevant keywords, meta tags, and high-quality content to improve organic search rankings and visibility. The site uses a variety of long tail and short tail keywords.
+
+* Users can sign up to digital marketing emails, hosted via mailchimp
 
 * Mock Facebook page
 ![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/f76f8d0d-7d91-4894-84e4-ba669f74b72b)
