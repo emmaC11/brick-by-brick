@@ -357,6 +357,7 @@ I used the following commands throughout the development of this project:
 * I followed [justdjango](https://justdjango.com/courses/django-ecommerce) ecommerce course for the majority of this project.
 * I used pre-built tailwind components, which I referenced in my code.
 * I used chat-gpt to help with code blocks & with my readme, especially in the features section.
+* I used [Code Institutes](https://learn.codeinstitute.net/ci_program/diplomainsoftwaredevelopmentecommerce) content throughout my project.
 * I referenced previous projects on my [GitHub](https://github.com/emmaC11/Dev-Connect) account.
 
 
