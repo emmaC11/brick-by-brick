@@ -251,7 +251,44 @@ The primary purpose of brick by brick is to provide an online platform for users
 * I kept a onenote notebook to log all notes from CI content, links etc associated with PP5. This help me keep track of what resources I used, masterclass notes & bugs tracked throughout the development cycle.
 ![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/3b005012-2228-4e2d-802d-eb2baf6f70b7)
 
+# **Deployment**
+## Project Creation
+This project was created using Gitpod, Gitpod provides prebuilt development environments with a variety of IDEs.
 
+To use Gitpod, install the Gitpod extension on either Firefox or Chrome. When the extension is installed, it adds a green Gitpod button to Github, where we can click to create a workspace in Gitpod.
+
+For this project, I used the Visual Studio IDE. I used the prebuilt environment provided by [Code Institue](https://github.com/Code-Institute-Org/gitpod-full-template) to start this project. I clicked the 'use this template' button and named my repository 'brick-by-brick'. I then created a Gitpod workspace by clicking the green gitpod button in my [brick-by-brick](https://github.com/emmaC11/brick-by-brick) repository.
+
+I used the following commands throughout the development of this project:
+* **python3 manage.py runserver**  - This command runs a local webserver to view the project.
+* **git add .** - This command adds all the changes that have been in the working directory to the staging area. Ready to be committed.
+* **git commit -m ""** - This command is used to write descriptive messages of what changes have been made to the code and commits the changes to the local repository.
+* **git push** - This command pushes all the committed changes to the Github repository.
+* **python3 manage.py migrate** - This command migrates any database model changes.
+* **pip3 freeze --local > requirements.txt** - This command updates requirements.txt file after any installations.
+
+## Heroku Deployment
+1. Open Heroku & create a free account.
+2. From the dashboard page, click the 'create new app' button.
+3. Create an app name, this must be unique & choose your region (either America or Europe).
+4. Go to [elephantsql.com](https://www.elephantsql.com/), login with GitHub and create a new instance.
+5. Copy the URL once the project instance has been created. This value can also be saved with as environment variable used to equal the `DATABASES` variable in `settings.py`.
+6. Install the `dj-database-url` package version 0.5.0 by using `pip3 install dj_database_url==0.5.0` to format the URL into one that Django can use, subsequently updating the `requirements.txt`.
+7. Create a cloudinary account.
+8. Copy the Cloudinary API URL from your dashboard.
+9. Make sure to make any migrations in the project, by typing `python3 manage.py makemigrations` followed by `python3 manage.py migrate` into the terminal.
+10. Ensure a `Procfile`, which contains `web: gunicorn [project_name].wsgi:application` is added to the project.
+11. Please ensure the above steps are completed before deplyment, the build will fail if these are not followed.
+12. Go back to Heroku and when the Project’s page opens up, go to the "settings" tab and scroll down to the “Config Vars” section. 
+13. Enter the following key-valuen pairs in the “Config Vars” section: 
+	* Key = `PORT` : Value = 8000
+	* Key = `SECRET_KEY` : Value = Django Secret Key value obtained from `settings.py`
+	* Key = `DATABASE_URL` : Value = ElephantSQL URL from point 5.
+	* Key = `CLOUDINARY_URL` : Value = Cloudinary API URL from your Cloudinary account in point 9.
+14. Go to the “Deploy” tab next and scroll down to the GitHub deployment method.
+15. Search for the suitable repository and then connect to it by selecting the “Connect” button.
+16. Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to conduct. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository. Otherwise, you will have to manually deploy, by selecting the button at the bottom of the page.
+17. The application is now deployed!
 
 
 
