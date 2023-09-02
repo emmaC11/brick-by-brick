@@ -210,7 +210,6 @@ The site has been tested regularly during development. After the site was comple
 * Images were not loading as I was not using load static template tag, I used images locally as a temporary fix until I identified the issue.
 * Several times I forgot to close loops & if statements, best practise was going line by line to ensure the conditional or loop was closed when required,
 * Some of my commit messages have spelling errors, however this is due to an issue with the bash terminal. I type the commit message correctly however it is changed after I confirm the commit.
-![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/a41f9e86-5a3b-4d27-94a5-99dfcc3cd5be)
 * Some of my commit messages are way to vague, several commits have comments as I only realise after I complete a git push that several files & lines have been edited. I noticed that as I reached my project deadline my commit messages were becoming shorter & shorter.
 * Tailwind css file constantly adding changes automatically, that is why these changes are mentioned in commits.
 * Brick-by-brick project name not available in heroku, used brick-by-brickk
@@ -223,6 +222,10 @@ The site has been tested regularly during development. After the site was comple
 Legoorderitems not items in related name
 ![image](https://github.com/emmaC11/Dev-Connect/assets/83119583/ff36849e-2985-4d3c-90ec-1c426165bb24)
 * PAYPAL scripts not rendering as I did not load script tags in base.html
+* 404 template is not loading when there is a 404 error.
+* Selected theme is not reflecting in dropdown box when selected.
+* Originally tried to set up marketing emails using smtp, however could not get this working so I used mailchimp instead.
+* I originally created my repo using the template for codeanywhere instead of gitpod.
 
 # Business Model
 The primary purpose of brick by brick is to provide an online platform for users to browse, select, and purchase LEGO products. The business model is primarily B2C (Business to Consumer), targeting individual consumers who are LEGO enthusiasts and shoppers interested in LEGO sets and products.
