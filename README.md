@@ -290,6 +290,36 @@ I used the following commands throughout the development of this project:
 16. Scroll down to the bottom of the “Deploy” Page and select the type of deployment you want to conduct. If you opt to “Automatically Deploy”, it will deploy every time you push new code to your repository. Otherwise, you will have to manually deploy, by selecting the button at the bottom of the page.
 17. The application is now deployed!
 
+## Technologies Used
+* [Django Framework](https://www.djangoproject.com/#:~:text=Django%20is%20a%20high%2Dlevel,It's%20free%20and%20open%20source.)
+* [Python](https://www.python.org/)
+* [Heroku](https://dashboard.heroku.com/apps)
+* [Cloudinary](https://cloudinary.com)
+* [Paypal](https://developer.paypal.com/docs/checkout/)
+* [HTML5](https://developer.mozilla.org/en-US/docs/Glossary/HTML5)
+* [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Tailwind](https://tailwindui.com/)
+* [Google Fonts](https://fonts.google.com/)
+* [Github](https://github.com/emmaC11/PP1-starwars)
+* [GitPod](https://gitpod.io/)
+* [Font Awesome](https://fontawesome.com/)
+* [Lordicon](https://lordicon.com/icons/wired/outline?categoryId=3&premium=0)
+* [Flaticon](https://www.flaticon.com/search?word=lego)
+* [Mailchimp](https://login.mailchimp.com/?referrer=%2Flists%2Fmembers%3Fid%3D304620#p:1-s:25-sa:last_update_time-so:false)
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/validator)
+* [W3C HTML Validator](https://validator.w3.org/#validate_by_input)
+
+## Content & Media
+* Main landing image is from [unsplash](https://unsplash.com/)
+* All lego based icons are from [flaticon](https://www.flaticon.com/search?word=lego)
+* Product images & content are from the [official lego website](https://www.lego.com/en-ie)
+
+## Code
+* I followed [justdjango](https://justdjango.com/courses/django-ecommerce) ecommerce course for the majority of this project.
+* I used pre-built tailwind components, which I referenced in my code.
+* I used chat-gpt to help with code blocks & with my readme, especially in the features section.
+* I referenced previous projects on my [GitHub](https://github.com/emmaC11/Dev-Connect) account.
+
 
 
 
