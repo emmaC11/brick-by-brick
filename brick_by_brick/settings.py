@@ -32,10 +32,10 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 
 # DEV
-# DEBUG = True
+DEBUG = True
 
 # PROD
-DEBUG = False
+# DEBUG = False
 
 ALLOWED_HOSTS = [
     'brick-by-brickk.herokuapp.com',
@@ -43,6 +43,7 @@ ALLOWED_HOSTS = [
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu102.gitpod.io',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu103.gitpod.io',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu104.gitpod.io',
+    '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu105.gitpod.io',
     'localhost'
 ]
 
