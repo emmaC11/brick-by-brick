@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from django.views import generic
 from products.models import LegoSet, LegoSetTheme
+from products.forms import LegoThemeFilterForm
+
 
 class ProductListView(generic.ListView):
     template_name = 'cart/product_list.html'
@@ -25,5 +28,3 @@ class ProductListView(generic.ListView):
             )
             context['selected_theme_name'] = selected_theme.theme_name
         return context
-
-
