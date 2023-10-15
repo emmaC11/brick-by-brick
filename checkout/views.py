@@ -9,7 +9,7 @@ from django.contrib import messages
 from django.conf import settings
 from checkout.models import Payment
 from django.http import JsonResponse
-from user_details import AddressForm
+from user_details.forms import AddressForm
 
 
 class CheckoutView(generic.FormView):
