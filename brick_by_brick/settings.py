@@ -66,6 +66,9 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap4',
     'cart',
+    'products',
+    'checkout',
+    'user_details',
     'lego_main',
     'brick_by_brick'
 ]
