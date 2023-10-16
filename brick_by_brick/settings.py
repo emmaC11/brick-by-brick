@@ -44,6 +44,7 @@ ALLOWED_HOSTS = [
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu103.gitpod.io',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu104.gitpod.io',
     '8000-emmac11-brickbybrick-zs3bpjkroh2.ws-eu105.gitpod.io',
+    '8000-emmac11-brickbybrick-04n0scgr7bt.ws-eu105.gitpod.io',
     'localhost'
 ]
 
