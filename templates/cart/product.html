@@ -69,6 +69,23 @@
           <span class="text-black">Building Instructions</span>
           <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
         </a>
+        {% if request.user.is_superuser %}
+      <!-- todo: add forms, edit & delete -->
+        <hr class="border-t border-gray-300 my-2">
+        <a href="https://www.lego.com/en-us/service/buildinginstructions/75360?marketfallbackfrom=en-ie" target="_blank" rel="external"
+        class="flex items-center space-x-2">
+        <i class="fas fa-book-open text-black"></i>
+        <span class="text-black">Edit Lego Set </span>
+        <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
+      </a>
+      <hr class="border-t border-gray-300 my-2">
+      <a href="https://www.lego.com/en-us/service/buildinginstructions/75360?marketfallbackfrom=en-ie" target="_blank" rel="external"
+        class="flex items-center space-x-2">
+        <i class="fas fa-book-open text-black"></i>
+        <span class="text-black">Delete Lego Set</span>
+        <i class="fas fa-chevron-right text-gray-600 ml-auto"></i>
+      </a>
+      {% endif %}
       </div>
       <form method="POST">
         {% csrf_token %}
@@ -77,9 +94,7 @@
           class="mt-10 flex w-full items-center justify-center rounded-md border border-transparent bg-orange px-8 py-3 text-base font-medium text-black focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">Add
           to bag</button>
       </form>
-      {% if request.user.is_superuser %}
-      <p>admin permission</p>
-      {% endif %}
+      
     </div>
   </div>
   {% endblock %}
