@@ -210,3 +210,7 @@ class OrderConfirmedView(generic.View):
 
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'
+
+
+def edit_legoset(request, prod_id):
+    legoset = get_object_or_404(LegoSet, id=prod_id)
