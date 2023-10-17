@@ -1,7 +1,7 @@
 from typing import Any, Dict
 from django.contrib.auth.models import User
 from django import forms
-from cart.models import OrderItem, Address, LegoSetTheme
+from cart.models import OrderItem, Address, LegoSetTheme, LegoSet
 
 
 class LegoThemeFilterForm(forms.Form):
@@ -9,6 +9,13 @@ class LegoThemeFilterForm(forms.Form):
         (theme.id, theme.theme_name) for theme in LegoSetTheme.objects.all()]
     selected_theme = forms.ChoiceField(choices=[
         ('', 'All Themes')] + theme_choices, required=False)
+
+
+class LegoSetForm(forms.ModelForm):
+    class Meta:
+        model = LegoSet
+        fields = ['name', 'price', 'piece_count', 'ages', 'minifigures',
+                  'stock_quantity', 'is_available', 'image', 'theme']
 
 
 class AddToCartForm(forms.ModelForm):
