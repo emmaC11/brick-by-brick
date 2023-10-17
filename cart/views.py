@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.views import generic
-from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm
+from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm, LegoSetForm
 from cart.models import LegoSet, OrderItem, Address, Payment, LegoSetTheme
 from .utils import get_or_set_order_session
 from django.urls import reverse
@@ -214,3 +214,13 @@ class OrderCompleteView(generic.TemplateView):
 
 def edit_legoset(request, prod_id):
     legoset = get_object_or_404(LegoSet, id=prod_id)
+    if request.method == 'POST':
+        legosetForm = LegoSetForm(request.POST, request.FILES,
+                                  instance=legoset)
+        if legosetForm.is_valid():
+            legosetForm.save()
+            return redirect('cart:product_list')
+    else:
+        legosetForm = LegoSetForm(instance=legoset)
+
+    return render(request, 'edit_product.html', {'form': legosetForm})
