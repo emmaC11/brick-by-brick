@@ -211,16 +211,3 @@ class OrderConfirmedView(generic.View):
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'
 
-
-def edit_legoset(request, prod_id):
-    legoset = get_object_or_404(LegoSet, id=prod_id)
-    if request.method == 'POST':
-        legosetForm = LegoSetForm(request.POST, request.FILES,
-                                  instance=legoset)
-        if legosetForm.is_valid():
-            legosetForm.save()
-            return redirect('cart:product_list')
-    else:
-        legosetForm = LegoSetForm(instance=legoset)
-
-    return render(request, 'edit_product.html', {'form': legosetForm})
