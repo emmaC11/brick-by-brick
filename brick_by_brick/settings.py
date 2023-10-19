@@ -69,7 +69,8 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'cart',
     'lego_main',
-    'brick_by_brick'
+    'brick_by_brick',
+    'admin'
 ]
 
 # DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
