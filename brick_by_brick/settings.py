@@ -70,7 +70,7 @@ INSTALLED_APPS = [
     'cart',
     'lego_main',
     'brick_by_brick',
-    'admin'
+    'manager'
 ]
 
 # DEFAULT_FROM_EMAIL = os.environ.get('DEFAULT_FROM_EMAIL')
