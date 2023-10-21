@@ -11,13 +11,6 @@ class LegoThemeFilterForm(forms.Form):
         ('', 'All Themes')] + theme_choices, required=False)
 
 
-class LegoSetForm(forms.ModelForm):
-    class Meta:
-        model = LegoSet
-        fields = ['name', 'price', 'piece_count', 'ages', 'minifigures',
-                  'stock_quantity', 'is_available', 'image', 'theme']
-
-
 class AddToCartForm(forms.ModelForm):
 
     class Meta:

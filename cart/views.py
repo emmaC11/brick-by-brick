@@ -8,7 +8,7 @@ from django.http import HttpResponse
 from django.http import JsonResponse
 from django.shortcuts import redirect, render, get_object_or_404
 from django.views import generic
-from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm, LegoSetForm
+from .forms import AddToCartForm, AddressForm, LegoThemeFilterForm
 from cart.models import LegoSet, OrderItem, Address, Payment, LegoSetTheme
 from .utils import get_or_set_order_session
 from django.urls import reverse
