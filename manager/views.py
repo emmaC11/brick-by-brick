@@ -24,6 +24,13 @@ class UpdateLegoSetView(generic.UpdateView):
     queryset = LegoSet.objects.all()
     form_class = LegoSetForm
 
+    def get_success_url(self):
+        return reverse("cart:product_list")
+
+    def form_valid(self, form):
+        form.save()
+        return super(UpdateLegoSetView, self).form_valid(form)
+
 
 class DeleteLegoSetView(generic.DeleteView):
     template_name = 'manager/delete_product.html'
