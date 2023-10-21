@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.views import generic
+from cart.models import LegoSet
 
 
 # CRUD FUNCTIONALITY
@@ -13,4 +14,4 @@ class UpdateLegoSetView(generic.UpdateView):
 
 
 class DeleteLegoSetView(generic.DeleteView):
-    print('add logic to delete legoset')
+    queryset = LegoSet.objects.all
