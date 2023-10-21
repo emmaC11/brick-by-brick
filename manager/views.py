@@ -7,7 +7,10 @@ from django.urls import reverse
 # CRUD FUNCTIONALITY
 
 class CreateLegoSetView(generic.CreateView):
-    print('add logic to create legoset')
+    template_name = 'manager/create_product.html'
+
+    def get_success_url(self):
+        return reverse("cart:product_list")
 
 
 class UpdateLegoSetView(generic.UpdateView):
