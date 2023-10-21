@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.views import generic
 from cart.models import LegoSet
 from django.urls import reverse
+from manager.forms import LegoSetForm
 
 
 # CRUD FUNCTIONALITY
