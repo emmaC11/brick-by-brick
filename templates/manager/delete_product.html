@@ -1,9 +1,23 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
-<form method="post">
-    {% csrf_token %}
-    {{ form | crispy }}
-    <button type="submit">Save</button>
-</form>
+<div class=" form-container flex justify-center mt-5 h-screen text-center">
+    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
+<lord-icon
+    src="https://cdn.lordicon.com/xekbkxul.json"
+    trigger="hover"
+    stroke="bold"
+    colors="primary:#e83a30,secondary:#ffffff,tertiary:#646e78,quaternary:#ebe6ef"
+    style="width:250px;height:200px">
+</lord-icon>
+<h1 class="text-2xl font-bold mb-4 text-center">You are about to delete a product</h1>
+    <form method="post" class="product-delete">
+        {% csrf_token %}
+        <p class="text-xl text-gray-500 ">This will delete the product from the catalog</p>
+        <p class="text-xl text-gray-500">Are you sure?</p>
+        {{ form|crispy }}
+        <button type="submit" class="submit-button bg-orange text-black font-semibold rounded-md px-3 py-2 no-underline hover:no-underline">Save</button>
+    </form>
+</div>
+</div>
 {% endblock %}
