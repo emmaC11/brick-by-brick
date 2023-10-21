@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views import generic
 from cart.models import LegoSet
+from django.urls import reverse
 
 
 # CRUD FUNCTIONALITY
@@ -16,3 +17,6 @@ class UpdateLegoSetView(generic.UpdateView):
 class DeleteLegoSetView(generic.DeleteView):
     template_name = 'manager/delete_product.html'
     queryset = LegoSet.objects.all()
+
+    def get_success_url(self):
+        return reverse("cart:product_list")
