@@ -14,4 +14,4 @@ class UpdateLegoSetView(generic.UpdateView):
 
 
 class DeleteLegoSetView(generic.DeleteView):
-    queryset = LegoSet.objects.all
+    queryset = LegoSet.objects.all()
