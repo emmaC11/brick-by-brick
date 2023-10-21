@@ -14,4 +14,5 @@ class UpdateLegoSetView(generic.UpdateView):
 
 
 class DeleteLegoSetView(generic.DeleteView):
+    template_name = 'manager/delete_product.html'
     queryset = LegoSet.objects.all()
