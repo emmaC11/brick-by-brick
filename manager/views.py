@@ -9,6 +9,7 @@ from manager.forms import LegoSetForm
 
 class CreateLegoSetView(generic.CreateView):
     template_name = 'manager/create_product.html'
+    form_class = LegoSetForm
 
     def get_success_url(self):
         return reverse("cart:product_list")
