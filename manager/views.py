@@ -20,7 +20,9 @@ class CreateLegoSetView(generic.CreateView):
 
 
 class UpdateLegoSetView(generic.UpdateView):
-    print('add logic to update legoset')
+    template_name = 'manager/update_product.html'
+    queryset = LegoSet.objects.all()
+    form_class = LegoSetForm
 
 
 class DeleteLegoSetView(generic.DeleteView):
