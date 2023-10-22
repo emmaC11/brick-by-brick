@@ -1,10 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-<div class="container">
-    <div class="flex justify-center">
-        <h1>Oops! Page Not Found (404)</h1>
-        <a href="{% url 'home' %}" class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Return Home</a>
+<div class="404-container flex justify-center mt-5 h-screen text-center">
+    <div class="w-full max-w-md p-8 bg-white rounded-lg shadow-md">
+        <lord-icon
+            src="https://cdn.lordicon.com/jxzkkoed.json"
+            trigger="hover"
+            style="width:250px;height:200px">
+        </lord-icon>
+        <h1 class="text-2xl font-bold mb-4 text-center">Oops! Page not found</h1>
+        <a href="{% url 'home' %}" class="bg-orange text-black font-semibold rounded-md px-3 py-2 no-underline hover:no-underline">Return to Brick by Brick</a>
     </div>
 </div>
 {% endblock %}
