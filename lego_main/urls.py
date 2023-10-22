@@ -1,6 +1,6 @@
 from django.urls import path, include
 from lego_main import views
-from .views import handler404
+from lego_main.views import handler404
 
 urlpatterns = [
     path('', views.HomeView.as_view(), name='home'),
@@ -12,4 +12,4 @@ urlpatterns = [
         name='user_profile'),
 ]
 
-handler404 = 'lego_main.views.handler404'
+handler404 = handler404
