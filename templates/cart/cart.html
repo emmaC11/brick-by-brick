@@ -1,6 +1,16 @@
 {% extends "base.html" %}
 {% block content %}
 
+<div class="mx-20 mt-4 text-sm">
+  <div class="breadcrumb">
+      <a href="{% url 'home' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Home</a>
+      <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+      <a href="{% url 'cart:product_list' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Shop</a>
+      <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+      <strong class="font-semibold text-black">Cart</strong>
+  </div>
+</div>
+
 <!-- design from - https://tailwindcomponents.com/component/shopping-cart-responsive -->
 <div class="cart-container pt-20 mx-20">
   <h1 class="mb-10 text-left text-2xl">My Bag</h1>
