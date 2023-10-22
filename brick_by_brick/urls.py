@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from lego_main.views import handler404
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -22,3 +23,5 @@ urlpatterns = [
     path('accounts/', include('allauth.urls')),
     path('manager/', include('manager.urls', namespace='manager'))
 ]
+
+handler404 = handler404
