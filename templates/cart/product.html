@@ -2,6 +2,16 @@
 {% load crispy_forms_tags %}
 {% block content %}
 
+<div class="container text-sm mt-4">
+  <div class="breadcrumb">
+      <a href="{% url 'home' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Home</a>
+      <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+      <a href="{% url 'cart:product_list' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Shop</a>
+      <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+      <strong class="font-semibold text-black">{{ legoset.name }}</strong>
+  </div>
+</div>
+
 <!-- Product info & image -->
 <div
   class="mx-auto max-w-2xl px-4 pb-16 pt-10 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto,auto,1fr] lg:gap-x-8 lg:px-8 lg:pb-24 lg:pt-16">
