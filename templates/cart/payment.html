@@ -1,6 +1,21 @@
 {% extends "base.html" %}
 
 {% block content %}
+
+<div class="mx-20 mt-4 text-sm">
+    <div class="breadcrumb">
+        <a href="{% url 'home' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Home</a>
+        <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+        <a href="{% url 'cart:product_list' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Shop</a>
+        <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+        <a href="{% url 'cart:cart_summary' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Cart</a>
+        <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+        <a href="{% url 'cart:checkout' %}" class="text-blue-500 font-semibold no-underline hover:no-underline">Checkout</a>
+        <span class="mx-2"><i class="fas fa-chevron-right"></i></span>
+        <strong class="font-semibold text-black">Payment</strong>
+    </div>
+  </div>
+
 <div class="order_summary text-center mt-5">
     <h4>Select a payment method</h4>
     <p>Order total: €{{ order.get_order_total }}</p>
