@@ -13,7 +13,7 @@ class CreateLegoSetView(generic.CreateView):
 
     def get_success_url(self):
         return reverse("cart:product_list")
-    
+
     def form_valid(self, form):
         form.save()
         return super(CreateLegoSetView, self).form_valid(form)

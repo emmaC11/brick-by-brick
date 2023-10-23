@@ -210,4 +210,3 @@ class OrderConfirmedView(generic.View):
 
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'
-

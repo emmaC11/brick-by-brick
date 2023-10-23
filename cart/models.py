@@ -150,4 +150,3 @@ class Payment(models.Model):
     @property
     def reference_number(self):
         return f"PAYMENT-{self.order}-{self.pk}"
-
