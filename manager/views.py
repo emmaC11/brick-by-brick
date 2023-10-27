@@ -17,6 +17,7 @@ class CreateLegoSetView(generic.CreateView):
 
     def form_valid(self, form):
         form.save()
+        messages.success(self.request, 'Lego set created successfully!')
         return super(CreateLegoSetView, self).form_valid(form)
 
 
@@ -39,4 +40,5 @@ class DeleteLegoSetView(generic.DeleteView):
     queryset = LegoSet.objects.all()
 
     def get_success_url(self):
+        messages.success(self.request, 'Lego set deleted successfully!')
         return reverse("cart:product_list")
