@@ -33,3 +33,10 @@
         </div>
     </div>
 </nav>
+<div class="messages-display text-center">
+    {% for message in messages %}
+        <div class="message text-green-600 font-bold">
+            {{ message }}
+        </div>
+    {% endfor %}
+</div>
