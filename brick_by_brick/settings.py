@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # DEV
 # DEBUG = True
 
-PROD
+# PROD
 DEBUG = False
 
 ALLOWED_HOSTS = [
