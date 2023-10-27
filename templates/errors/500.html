@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="404-container flex justify-center mt-5 h-screen text-center">
+    <div class="w-full max-w-md p-2 bg-white rounded-lg shadow-md">
+        <lord-icon
+            src="https://cdn.lordicon.com/jxzkkoed.json"
+            trigger="hover"
+            style="width:250px;height:200px">
+        </lord-icon>
+        <h1 class="text-2xl font-bold mb-4 text-center">Oops! Server Error</h1>
+        <a href="{% url 'home' %}" class="bg-orange text-black font-semibold rounded-md px-3 py-2 no-underline hover:no-underline">Return to Brick by Brick</a>
+    </div>
+</div>
+{% endblock %}
