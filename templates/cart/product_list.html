@@ -12,18 +12,25 @@
     </div>
     <div class="action-ribbon mb-4 mt-3">
         <form method="get" class="inline-block">
-            {{ lego_theme_filter_form }}
+            <label for="selected_theme_id">Select a theme:</label>
+            <select name="selected_theme" id="selected_theme_id">
+                <option value="">All Themes</option>
+                {% for theme_id, theme_name in lego_theme_filter_form.theme_choices %}
+                <option value="{{ theme_id }}">{{ theme_name }}</option>
+                {% endfor %}
+            </select>
             <button type="submit"
                 class="ml-2 bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Apply
                 Filter</button>
         </form>
-        <a href="{% url 'cart:product_list' %}" class="bg-gray-200 text-gray-700 py-2 px-4 no-underline rounded ml-4">Clear
-            Filter</a>  
-            {% if request.user.is_superuser %} 
-        <a href="{% url 'manager:legoset_create' %}" class="ml-2 bg-gray-200 text-gray-700  rounded-md py-2 px-3 no-underline hover:no-underline">Add Product</a>
-            {% endif %}
+        <a href="{% url 'cart:product_list' %}"
+            class="bg-gray-200 text-gray-700 py-2 px-4 no-underline rounded ml-4">Clear
+            Filter</a>
+        {% if request.user.is_superuser %}
+        <a href="{% url 'manager:legoset_create' %}"
+            class="ml-2 bg-gray-200 text-gray-700  rounded-md py-2 px-3 no-underline hover:no-underline">Add Product</a>
+        {% endif %}
     </div>
- 
     <div class="theme-description bg-gray-200 p-4 rounded-md text-sm mb-4">
         {% if selected_theme_name %}
         <h5 class="font-semibold mb-2">{{ selected_theme_name }}</h5>
@@ -40,9 +47,9 @@
             or characters are used purely for educational and non-commercial purposes. All rights to the LEGO Group and
             its intellectual property are acknowledged and respected.</p>
         {% endif %}
-    
+
     </div>
-    
+
     <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {% for legoset in object_list %}
         <div class="bg-white p-6 shadow-md rounded-lg w-full h-full border border-gray-300">
