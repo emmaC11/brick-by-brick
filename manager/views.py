@@ -3,6 +3,7 @@ from django.views import generic
 from cart.models import LegoSet
 from django.urls import reverse
 from manager.forms import LegoSetForm
+from django.contrib import messages
 
 
 # CRUD FUNCTIONALITY
@@ -29,6 +30,7 @@ class UpdateLegoSetView(generic.UpdateView):
 
     def form_valid(self, form):
         form.save()
+        messages.success(self.request, 'Lego set updated successfully!')
         return super(UpdateLegoSetView, self).form_valid(form)
 
 
