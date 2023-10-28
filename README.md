@@ -364,6 +364,46 @@ I used the following commands throughout the development of this project:
 
 
 
+# **Resubmission Updates**
+## Updates
+
+I received my results approximately 3 weeks ago informing me that I failed my PP5. I felt disheartened at first, but I decided not to let it get me down & to actively come up with a plan 
+to analyse the feedback I received & how can I meet the criteria expected of me. I created a onenote document, listing all the criteria I did not meet & links to content to help me address these
+issues.
+
+* **CRUD Functionality**
+Within the UI, super users have the functionality to add a product, delete a product & edit a product. 
+Products can be added using the 'add product' button on the product list page.
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/85e8cae7-da2f-42ae-9e8a-85d90fc94f96)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/73a5506e-6dd7-4308-8f14-a1f5fd82e6ff)
+
+Products can be edited & deleted by seleting the chosen product from the product list page, & select the action required
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/db137fbd-56bc-487b-b246-ef584f64e4ed)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/e67e3f42-e756-4e1a-a7ac-ea3d479cdbc1)
+![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/badf97f4-5f0e-4232-be31-6bbf09e87fd2)
+
+>Originally this functionality was within the admin panel & deleting a product from the cart did not make changes to the backend model.
+
+* **Error handling template**
+I added templates for 400 & 500 errors.
+> Originally, I had attempted this but could not get it working
+
+* **Validation Tools**
+All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
+
+* **Framework Design**
+Cart App - covers everything product related as the purpose of an ecommerce site is for products to be purchased.
+Lego_Main App - covers functionality outside of purchasing, such as error templates & user profile functionality.
+Manager App - covers all CRUD functionality as this functionality should only be for admins/managers
+Theme App - this is required for tailwind setup in project
+Templates - I decided to store all in my templates in one folder & categorise within the directory.
+> Originally, I had majority of functionality within cart app
+
+* **UI Updates**
+Django messages have been added, displayed on product list page.
+Breadcrumb navigation has been added to each page.
+UI elements aded to homescreen
+> Originally, django messages & breadcrumb navigation were not implemented
 
 
 
