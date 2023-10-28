@@ -4,6 +4,8 @@ Welcome to Brick by Brick! This project is a replica of the popular LEGO website
 # Disclaimer
 Please note that this project is purely for educational and demonstrative purposes. No actual products are sold through this website, and no financial transactions are being conducted. The project does not involve any real-world e-commerce operations or the handling of sensitive user information. The products displayed on this website are not for sale and are used for illustrative purposes. No products are sold here. This project is not affiliated with or endorsed by the LEGO Group or any other entity. All LEGO related trademarks, copyrights, and other intellectual property rights are the property of the LEGO Group. Any references to LEGO products, themes, or characters are used purely for educational and non-commercial purposes. All rights to the LEGO Group and its intellectual property are acknowledged and respected. This project serves as a personal project to showcase the skills I have learned from my full-stack course.
 
+# [Resubmission Updates](#resubmission-updates)
+
 # **User Experience & Design**
 
 # User Stories
