@@ -382,11 +382,11 @@ Products can be edited & deleted by seleting the chosen product from the product
 ![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/e67e3f42-e756-4e1a-a7ac-ea3d479cdbc1)
 ![image](https://github.com/emmaC11/brick-by-brick/assets/83119583/badf97f4-5f0e-4232-be31-6bbf09e87fd2)
 
->Originally this functionality was within the admin panel & deleting a product from the cart did not make changes to the backend model.
+> This functionality was within the admin panel in the previous version.
 
 **Error handling template**
 * I added templates for 400 & 500 errors.
-> Originally, I had attempted this but could not get it working.
+> Code was present in previous version but was not functional.
 
 **Validation Tools**
 * All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
@@ -400,7 +400,7 @@ Products can be edited & deleted by seleting the chosen product from the product
 * Admin panel loads with styles applied in production environment.
 * Order confirmation mail set up in the console.
 ![image](https://github.com/emmaC11/Caesar-Cipher/assets/83119583/759300df-1477-43e4-aae7-aaa8273d3b20)
-> Originally, django messages & breadcrumb navigation were not implemented
+> The above were not implemented in previous the version.
 
 **Framework Design**
 My Django project is named brick_by_brick & the functionality is split into 4 distinct apps. The purpose of a django application is to provide a set of features. Documentation
