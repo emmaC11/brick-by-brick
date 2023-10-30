@@ -212,6 +212,13 @@ class OrderConfirmedView(generic.View):
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(OrderCompleteView, self).get_context_data(**kwargs)
+        order = get_or_set_order_session(self.request)
+        context["order"] = order
+        self.order_confirmation_mail(order)
+        return context
+
     def order_confirmation_mail(self, order):
         email_body = (
             "Thank you for your order!\n"
