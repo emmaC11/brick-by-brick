@@ -163,8 +163,6 @@ class CheckoutView(generic.FormView):
             order.billing_address = address
 
         order.save()
-        messages.info(
-            self.request, "Thank you! You have added your address details.")
         return super(CheckoutView, self).form_valid(form)
 
     def get_form_kwargs(self):

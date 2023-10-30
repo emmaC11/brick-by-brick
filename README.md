@@ -384,14 +384,12 @@ Products can be edited & deleted by seleting the chosen product from the product
 
 >Originally this functionality was within the admin panel & deleting a product from the cart did not make changes to the backend model.
 
-* **Error handling template**
-I added templates for 400 & 500 errors.
+**Error handling template** - I added templates for 400 & 500 errors.
 > Originally, I had attempted this but could not get it working
 
-* **Validation Tools**
-All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
+**Validation Tools** - All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
 
-* **Framework Design**
+**Framework Design**
 Cart App - covers everything product related as the purpose of an ecommerce site is for products to be purchased.
 Lego_Main App - covers functionality outside of purchasing, such as error templates & user profile functionality.
 Manager App - covers all CRUD functionality as this functionality should only be for admins/managers
