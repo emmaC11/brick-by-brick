@@ -82,21 +82,15 @@
         {% if request.user.is_superuser %}
       <!-- todo: add forms, edit & delete -->
         <hr class="border-t border-gray-300 my-2">
-        <a href="https://www.lego.com/en-us/service/buildinginstructions/75360?marketfallbackfrom=en-ie" target="_blank" rel="external"
-        class="flex items-center space-x-2">
         <a href="{% url 'manager:legoset_update' pk=legoset.pk %}">
         <i class="fa-solid fa-pen-to-square text-black"></i>
         <span class="text-black">Edit Lego Set </span>
         </a>
-      </a>
       <hr class="border-t border-gray-300 my-2">
-      <a href="https://www.lego.com/en-us/service/buildinginstructions/75360?marketfallbackfrom=en-ie" target="_blank" rel="external"
-        class="flex items-center space-x-2">
         <a href="{% url 'manager:legoset_delete' pk=legoset.pk %}">
         <i class="fa-regular fa-square-minus text-black"></i>
         <span class="text-black">Delete Lego Set</span>
         </a>
-      </a>
       {% endif %}
       </div>
       <form method="POST">

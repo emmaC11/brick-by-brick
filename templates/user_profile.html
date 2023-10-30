@@ -20,7 +20,7 @@
                     <a href="{% url 'account_logout' %}"
                         class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Logout</a>
                         {% if request.user.username == 'admin' %}
-                        <a href="{% url 'admin:index' %}"class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Admin</a>
+                        <a href="{% url 'admin:index' %}" class="bg-orange text-black font-semibold rounded-md py-2 px-3 no-underline hover:no-underline">Admin</a>
                         {% endif %}
                     <hr class="my-4">
                     <h5 class="text-xl font-semibold">Your Orders</h5>
