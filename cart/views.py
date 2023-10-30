@@ -1,6 +1,7 @@
 import datetime
 import json
 from django.conf import settings
+from django.core.mail import send_mail
 from django.contrib import messages
 from typing import Any, Dict
 from django.db.models.query import QuerySet
@@ -210,3 +211,18 @@ class OrderConfirmedView(generic.View):
 
 class OrderCompleteView(generic.TemplateView):
     template_name = 'cart/order_complete.html'
+
+    def order_confirmation_mail(self, order):
+        email_body = (
+            "Thank you for your order!\n"
+            f"Please find your order number attached: {order}\n"
+            "Please reach out to our cart support team if you have queries!\n"
+            "Thanks, Brick By Brick Cart Team"
+            )
+
+        send_mail(
+            subject="Brick by Brick Order confirmed",
+            message=email_body,
+            from_email=settings.DEFAULT_FROM_EMAIL,
+            recipient_list=[settings.NOTIFY_EMAIL]
+        )
