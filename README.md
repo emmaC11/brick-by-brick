@@ -397,7 +397,9 @@ Products can be edited & deleted by seleting the chosen product from the product
 * Breadcrumb navigation has been added to each page.
 * Additional UI elements added to homescreen.
 * Marketing email form added to footer instead of loading in a seperate template.
+* Admin panel loads with styles applied in production environment.
 * Order confirmation mail set up in the console.
+![image](https://github.com/emmaC11/Caesar-Cipher/assets/83119583/759300df-1477-43e4-aae7-aaa8273d3b20)
 > Originally, django messages & breadcrumb navigation were not implemented
 
 **Framework Design**
