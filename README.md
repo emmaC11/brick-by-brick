@@ -384,15 +384,20 @@ Products can be edited & deleted by seleting the chosen product from the product
 
 >Originally this functionality was within the admin panel & deleting a product from the cart did not make changes to the backend model.
 
-**Error handling template** - I added templates for 400 & 500 errors.
-> Originally, I had attempted this but could not get it working
+**Error handling template**
+* I added templates for 400 & 500 errors.
+> Originally, I had attempted this but could not get it working.
 
-**Validation Tools** - All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
+**Validation Tools**
+* All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
+> Errors were present prior to updates.
 
 **UI Updates**
-Django messages have been added, displayed on product list page.
-Breadcrumb navigation has been added to each page.
-UI elements aded to homescreen
+* Django messages have been added, displayed on product list page.
+* Breadcrumb navigation has been added to each page.
+* Additional UI elements added to homescreen.
+* Marketing email form added to footer insteaf of loading in seperate page.
+* Order confirmation mail set up in the console.
 > Originally, django messages & breadcrumb navigation were not implemented
 
 **Framework Design**
