@@ -389,19 +389,33 @@ Products can be edited & deleted by seleting the chosen product from the product
 
 **Validation Tools** - All pages now pass HTML validation tools, & I have no errors within my IDE with python linter.
 
-**Framework Design**
-Cart App - covers everything product related as the purpose of an ecommerce site is for products to be purchased.
-Lego_Main App - covers functionality outside of purchasing, such as error templates & user profile functionality.
-Manager App - covers all CRUD functionality as this functionality should only be for admins/managers
-Theme App - this is required for tailwind setup in project
-Templates - I decided to store all in my templates in one folder & categorise within the directory.
-> Originally, I had majority of functionality within cart app
-
-* **UI Updates**
+**UI Updates**
 Django messages have been added, displayed on product list page.
 Breadcrumb navigation has been added to each page.
 UI elements aded to homescreen
 > Originally, django messages & breadcrumb navigation were not implemented
+
+**Framework Design**
+My Django project is named brick_by_brick & the functionality is split into 4 distinct apps. The purpose of a django application is to provide a set of features. Documentation
+can be found [here](https://docs.djangoproject.com/en/4.2/ref/applications/#projects-and-applications). Please find below a breakdown of the purpose & functionality of each app in brick by brick: <br>
+1. Cart App
+* Handles all the product-related functionalities, from browsing the product list page to the checkout process.
+* Contains all models, views and forms related to viewing products, adding & removing items from the cart & processing orders using the PAYPAL API.
+* Manages the process flow for users from adding products to the cart to the checkout process.
+2. Lego_Main App
+* Contains additional functionalities and services that do not fall directly into the ecommerce product to payment process flow.
+* Handles error handling methods, user profile page, and potentially other global functionalities that can be implemented in the project.
+3. Manager App
+* Primarily covers functionality for managing product data which includes creating data, updating data & deleting data.
+* Implements CRUD functionality that is accessible to superusers only.
+* This app seperates functionality & roles for regular users & managers/superusers.
+4. Theme App
+* This app is required for the tailwind setup in my project, which ensures consistent styling throughout the site.
+* Primarily contains configurations required for intergrating tailwind.
+* Helps maintain a consistent and visually appealing user interface across different pages and components on brick by brick.
+5. Templates
+* I decided to store all in my templates in one folder & categorise within the directory.
+> Originally, I had majority of functionality within cart app
 
 
 
